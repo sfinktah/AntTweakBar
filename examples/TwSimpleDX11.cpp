@@ -35,12 +35,12 @@
 
 #ifndef _DEBUG
 #include <CPluginHTML5.h>
-#include <CPluginD3D.h>
 // #include <platform_impl.h>
+#include <CPluginD3D.h>
+#endif
+
 #include "sfinktah/GuiConsole/guicon.h"
 #include "sfinktah/GuiConsole/guicontest.h"
-
-#endif
 #ifndef _DEBUG
 using namespace HTML5Plugin;
 using namespace D3DPlugin;

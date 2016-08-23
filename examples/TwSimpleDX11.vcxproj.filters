@@ -4,8 +4,6 @@
     <FxCompile Include="TwSimpleDX11.hlsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sfinktah\CPluginHTML5.cpp" />
-    <ClCompile Include="sfinktah\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="TwSimpleDX11.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicon.cpp">
       <Filter>GuiConsole</Filter>
@@ -13,13 +11,13 @@
     <ClCompile Include="sfinktah\GuiConsole\guicontest.cpp">
       <Filter>GuiConsole</Filter>
     </ClCompile>
+    <ClCompile Include="CryMemoryMagic.cpp" />
+    <ClCompile Include="..\..\Plugin_D3D\src\CPluginD3D.cpp" />
+    <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
+    <ClCompile Include="..\..\CryHTML5\src\CPluginHTML5.cpp" />
+    <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sfinktah\CEFRenderHandler.hpp" />
-    <ClInclude Include="sfinktah\CPluginHTML5.h" />
-    <ClInclude Include="sfinktah\FullscreenTriangleDrawer.h" />
-    <ClInclude Include="sfinktah\IPluginD3D.h" />
-    <ClInclude Include="sfinktah\IPluginHTML5.h" />
     <ClInclude Include="sfinktah\sigslot.h" />
     <ClInclude Include="StaticTest.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicon.h">
@@ -28,10 +26,19 @@
     <ClInclude Include="sfinktah\GuiConsole\guicontest.h">
       <Filter>GuiConsole</Filter>
     </ClInclude>
+    <ClInclude Include="../../Plugin_D3D/src/hooktools.h" />
+    <ClInclude Include="../../CryHTML5/src/CEFRenderHandler.hpp" />
+    <ClInclude Include="../../CryHTML5/src/CPluginHTML5.h" />
+    <ClInclude Include="../../CryHTML5/src/FullscreenTriangleDrawer.h" />
+    <ClInclude Include="../../Plugin_D3D/inc/IPluginD3D.h" />
+    <ClInclude Include="../../CryHTML5/inc/IPluginHTML5.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GuiConsole">
       <UniqueIdentifier>{fe585131-e634-440e-93b9-b900bd5dc9ab}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

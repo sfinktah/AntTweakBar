@@ -102,9 +102,7 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../include
-$(IntDir)
-%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -137,8 +135,8 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>sfinktah;$(VisualStudioDir)\Libraries\DirectXSDK\Include;$(VisualStudioDir)\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\Libraries\cef-binary;$(VisualStudioDir)\Libraries\cef-binary\include;$(VisualStudioDir)\Libraries\CryCEF\CryHTML5\cef\include;$(VisualStudioDir)\Libraries\CryCEF\CryHTML5\src;$(VisualStudioDir)\Libraries\CryCEF\Plugin_D3D\src;$(VisualStudioDir)\Libraries\CryCEF\Plugin_SDK\inc;$(VisualStudioDir)\Libraries\CryCEF\Plugin_SDK\src;$(VisualStudioDir)\Libraries\CryCEF\bare-minimum-cryengine3\code\CryCommon;$(VisualStudioDir)\Libraries\CryCEF\bare-minimum-cryengine3\code\CryGame;../include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;sfinktah;$(VisualStudioDir)\..\Libraries\DirectXSDK\Include;$(VisualStudioDir)\..\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\..\Libraries\cef-binary;$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=1;_ITERATOR_DEBUG_LEVEL=2;_SECURE_SCL=1;FORCE_STANDARD_ASSERT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -146,17 +144,20 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4189;4005;4244;4505;4324;4101</DisableSpecificWarnings>
+      <OmitFramePointers>false</OmitFramePointers>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(VisualStudioDir)\Libraries\lib\$(Configuration);$(VisualStudioDir)\Libraries\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\External-Libs\$(ConfigurationName);$(ProjectDir)\..\External-Libs\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -213,7 +214,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>sfinktah;$(VisualStudioDir)\Libraries\DirectXSDK\Include;$(VisualStudioDir)\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\Libraries\cef-binary;$(VisualStudioDir)\Libraries\cef-binary\include;$(VisualStudioDir)\Libraries\CryCEF\CryHTML5\cef\include;$(VisualStudioDir)\Libraries\CryCEF\CryHTML5\src;$(VisualStudioDir)\Libraries\CryCEF\Plugin_D3D\src;$(VisualStudioDir)\Libraries\CryCEF\Plugin_SDK\inc;$(VisualStudioDir)\Libraries\CryCEF\Plugin_SDK\src;$(VisualStudioDir)\Libraries\CryCEF\bare-minimum-cryengine3\code\CryCommon;$(VisualStudioDir)\Libraries\CryCEF\bare-minimum-cryengine3\code\CryGame;../include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;sfinktah;$(VisualStudioDir)\..\Libraries\DirectXSDK\Include;$(VisualStudioDir)\..\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\..\Libraries\cef-binary;$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -232,7 +233,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(VisualStudioDir)\Libraries\lib\$(Configuration);$(VisualStudioDir)\Libraries\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\External-Libs\$(ConfigurationName);$(ProjectDir)\..\External-Libs\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -242,17 +243,19 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention />
       <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalOptions>
+      </AdditionalOptions>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Libraries\CryCEF\Plugin_D3D\src\CPluginD3D.cpp" />
-    <ClCompile Include="..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Libraries\CryCEF\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
+    <ClCompile Include="..\..\Plugin_D3D\src\CPluginD3D.cpp" />
+    <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
     <ClCompile Include="CryMemoryMagic.cpp" />
-    <ClCompile Include="sfinktah\CPluginHTML5.cpp" />
-    <ClCompile Include="sfinktah\FullscreenTriangleDrawer.cpp" />
+    <ClCompile Include="..\..\CryHTML5\src\CPluginHTML5.cpp" />
+    <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicon.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicontest.cpp" />
     <ClCompile Include="TwSimpleDX11.cpp" />
@@ -266,14 +269,14 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
     </FxCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\onedrive\documents\visual studio 2015\libraries\crycef\plugin_d3d\src\hooktools.h" />
-    <ClInclude Include="sfinktah\CEFRenderHandler.hpp" />
-    <ClInclude Include="sfinktah\CPluginHTML5.h" />
-    <ClInclude Include="sfinktah\FullscreenTriangleDrawer.h" />
+    <ClInclude Include="../../Plugin_D3D/src/hooktools.h" />
+    <ClInclude Include="../../CryHTML5/src/CEFRenderHandler.hpp" />
+    <ClInclude Include="../../CryHTML5/src/CPluginHTML5.h" />
+    <ClInclude Include="../../CryHTML5/src/FullscreenTriangleDrawer.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicon.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicontest.h" />
-    <ClInclude Include="sfinktah\IPluginD3D.h" />
-    <ClInclude Include="sfinktah\IPluginHTML5.h" />
+    <ClInclude Include="../../Plugin_D3D/inc/IPluginD3D.h" />
+    <ClInclude Include="../../CryHTML5/inc/IPluginHTML5.h" />
     <ClInclude Include="sfinktah\sigslot.h" />
     <ClInclude Include="StaticTest.h" />
   </ItemGroup>
