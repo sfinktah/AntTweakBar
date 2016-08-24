@@ -32,6 +32,8 @@
     <ClInclude Include="../../CryHTML5/src/FullscreenTriangleDrawer.h" />
     <ClInclude Include="../../Plugin_D3D/inc/IPluginD3D.h" />
     <ClInclude Include="../../CryHTML5/inc/IPluginHTML5.h" />
+    <ClInclude Include="FakePluginManager.h" />
+    <ClInclude Include="TwSimpleDX11.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GuiConsole">

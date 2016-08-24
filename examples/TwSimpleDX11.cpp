@@ -22,6 +22,7 @@
 //
 //  ---------------------------------------------------------------------------
 
+// #include "TwSimpleDX11.h"
 #include <AntTweakBar.h>
 #include <cmath>
 #include <vector>
@@ -32,16 +33,14 @@
 
 // #include "sfinktah/CPluginHTML5.h"
 // #include <IPluginManager.h>
-
-#ifndef _DEBUG
-#include <CPluginHTML5.h>
+// #define XXX_DEBUG
+#ifndef XXX_DEBUG
 // #include <platform_impl.h>
 #include <CPluginD3D.h>
-#endif
-
+#include "FullscreenTriangleDrawer.h"
 #include "sfinktah/GuiConsole/guicon.h"
 #include "sfinktah/GuiConsole/guicontest.h"
-#ifndef _DEBUG
+#include <CPluginHTML5.h>
 using namespace HTML5Plugin;
 using namespace D3DPlugin;
 CPluginHTML5 *gChromePlugin = NULL;
@@ -269,16 +268,6 @@ LRESULT CALLBACK MessageProc(HWND, UINT, WPARAM, LPARAM);
 void Anim();
 void Render();
 HRESULT BuildSponge(int levelMax, bool aoEnabled);
-// CPluginHTML
-// CPluginHTML5 h5();
-// h5.Init();
-// 
-// HTML5Plugin::gPlugin = new CPluginHTML5;
-// static HTML5Plugin::CPluginHTML5 gChromePlugin;
-// gChromePlugin->init();
-// gChromePlugin->InitDepend();
-
-// D3DPlugin::CPluginD3D *HTML5Plugin::gD3DPlugin = NULL;
 
 // Callback function called by AntTweakBar to set the sponge recursion level
 void TW_CALL SetSpongeLevelCB(const void *value, void * /*clientData*/)
@@ -303,7 +292,9 @@ void TW_CALL GetSpongeAOCB(void *value, void * /*clientData*/)
 {
 }
 
-
+#ifndef WINAPI
+#define WINAPI __stdcall
+#endif
 // Main
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int cmdShow)
 {
@@ -351,7 +342,6 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int cmdShow)
         return 0;
     }
 	// We're not adding a new fkn swapchain, I want to see this work.  So we draw over the old one, which should be blank since we got rid of the gay cube
-	// HTML5Plugin::gD3DSystem->SetDevice(g_D3DDev);
 
 
 	/*
@@ -367,7 +357,7 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int cmdShow)
 	gD3DSystem->SetDevice(g_D3DDev);
 	gD3DSystem->SetDeviceContext(g_D3DDevCtx);
 	*/
-#ifndef _DEBUG
+#ifndef XXX_DEBUG
 	SfinktahsConsole();
 	gChromePlugin = new CPluginHTML5;
 	gChromePlugin->InitDependencies();  // Calls InitD3DPlugin, and InitCEF (which calls InitCEFBrowser)
@@ -376,13 +366,6 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int cmdShow)
 	// gD3DSystem = new CPluginD3D;
 	// HTML5Plugin::gD3DPlugin->InitWithoutPluginManager();
 	// gD3DPlugin->InitDependencies();
-
-	/*
-	CPluginHTML5::InitD3DPlugin(): 
-		Failed To Get The D3D Plug-in (Plugin_D3D). 
-		This Plug-in (HTML5) Depends On The D3D Plug-in (Plugin_D3D).
-		InitD3DPlugin failed
-	*/
 
     // Create a tweak bar
     TwBar *bar = TwNewBar("TweakBar");
@@ -846,3 +829,32 @@ void Anim()
 	// Stuff in here
 	s_PrevTick = tick;
 }
+
+
+/*
+
+This is testing _CRT_WARN output
+This is testing _CRT_ERROR output
+sfinktah\GuiConsole\guicontest.cpp(107) : Assertion failed: (null)
+sfinktah\GuiConsole\guicontest.cpp(109) : Assertion failed: 0 && "testing _ASSERTE"
+Notice: CPluginD3D constructed
+Notice: Looking for m_pDevice
+Error: Here: 264
+Error: Here: 266
+Error: Here: 274
+Error: Here: 281
+Error: Here: 300
+Notice: found: 0000000000000000
+Warning: DX11 device not found
+Notice: InitD3DPlugin success
+Notice: Initialize success
+Notice: CreateBrowser success
+Notice: Devtools URL:
+[0824/145841:ERROR:dxva_video_decode_accelerator_win.cc(440)] The eglQueryDeviceAttribEXT function failed to get the device
+Notice: LoadingStateChange:
+[0824/145841:ERROR:singleton_hwnd.cc(34)] Cannot create windows on non-UI thread!
+Notice: ProcessReques(UI/TestUI.html) Success Ext(htm) Mime(text/html) Size(576)
+Notice: LoadEnd: cry://UI/TestUI.html, 200
+Notice: LoadingStateChange: cry://UI/TestUI.html
+
+*/
