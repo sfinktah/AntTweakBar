@@ -1,0 +1,981 @@
+﻿<global>
+	<Career>
+	<header_name>Carriera</header_name>
+	<MPPLY_TOTAL_EVC>
+	<id>MPPLY_TOTAL_EVC</id>
+	<name>Entrate complessive</name>
+	<type>Money</type>
+	</MPPLY_TOTAL_EVC>
+	<MPPLY_TOTAL_SVC>
+	<id>MPPLY_TOTAL_SVC</id>
+	<name>Spese complessive</name>
+	<type>Money</type>
+	</MPPLY_TOTAL_SVC>
+	<MPPLY_KILLS_PLAYERS>
+	<id>MPPLY_KILLS_PLAYERS</id>
+	<name>Giocatori uccisi totali</name>
+	<type>INT</type>
+	</MPPLY_KILLS_PLAYERS>
+	<MPPLY_DEATHS_PLAYER>
+	<id>MPPLY_DEATHS_PLAYER</id>
+	<name>Uccisioni totali subite da giocatori</name>
+	<type>INT</type>
+	</MPPLY_DEATHS_PLAYER>
+	<MPPLY_KILL_DEATH_RATIO>
+	<id>MPPLY_KILL_DEATH_RATIO</id>
+	<name>Rapporto uccisioni/morti giocatore vs giocatore</name>
+	<type>DECIMAL</type>
+	</MPPLY_KILL_DEATH_RATIO>
+	<MPPLY_CHAR_DIST_TRAVELLED>
+	<id>MPPLY_CHAR_DIST_TRAVELLED</id>
+	<name>Distanza percorsa</name>
+	<type>meterstomiles</type>
+	</MPPLY_CHAR_DIST_TRAVELLED>
+	<MP_PLAYING_TIME>
+	<id>MP_PLAYING_TIME</id>
+	<name>Tempo trascorso in GTA Online</name>
+	<type>duration</type>
+	</MP_PLAYING_TIME>
+	<MP_FIRST_PERSON_CAM_TIME>
+	<id>MP_FIRST_PERSON_CAM_TIME</id>
+	<name>Tempo trascorso in prima persona</name>
+	<type>duration</type>
+	</MP_FIRST_PERSON_CAM_TIME>
+	<MPPLY_TOTAL_TIME_SPENT_DEATHMAT>
+	<id>MPPLY_TOTAL_TIME_SPENT_DEATHMAT</id>
+	<name>Tempo trascorso in deathmatch</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_SPENT_DEATHMAT>
+	<MPPLY_TOTAL_TIME_SPENT_RACES>
+	<id>MPPLY_TOTAL_TIME_SPENT_RACES</id>
+	<name>Tempo trascorso in gara</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_SPENT_RACES>
+	<MPPLY_TOTAL_TIME_MISSION_CREATO>
+	<id>MPPLY_TOTAL_TIME_MISSION_CREATO</id>
+	<name>Tempo trascorso nel Creatore</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_MISSION_CREATO>
+	<MPPLY_AWD_FM_CR_DM_MADE>
+	<id>MPPLY_AWD_FM_CR_DM_MADE</id>
+	<name>Deathmatch pubblicati</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_DM_MADE>
+	<MPPLY_AWD_FM_CR_RACES_MADE>
+	<id>MPPLY_AWD_FM_CR_RACES_MADE</id>
+	<name>Gare pubblicate</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_RACES_MADE>
+	<MPPLY_NUM_CAPTURES_CREATED>
+	<id>MPPLY_NUM_CAPTURES_CREATED</id>
+	<name>Catture pubblicate</name>
+	<type>INT</type>
+	</MPPLY_NUM_CAPTURES_CREATED>
+	<MPPLY_LTS_CREATED>
+	<id>MPPLY_LTS_CREATED</id>
+	<name>Last Team Standing pubblicati</name>
+	<type>INT</type>
+	</MPPLY_LTS_CREATED>
+	<MPPLY_AWD_FM_CR_PLAYED_BY_PEEP>
+	<id>MPPLY_AWD_FM_CR_PLAYED_BY_PEEP</id>
+	<name>Partite giocate dalla comunità coi contenuti da te pubblicati</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_PLAYED_BY_PEEP>
+	<MPPLY_FM_MISSION_LIKES>
+	<id>MPPLY_FM_MISSION_LIKES</id>
+	<name>Pollici in su per i contenuti da te pubblicati</name>
+	<type>INT</type>
+	</MPPLY_FM_MISSION_LIKES>
+	</Career>
+	<Skills>
+	<header_name>Abilità</header_name>
+	<MP_STAMINA>
+	<id>MP{0}_STAMINA</id>
+	<name>Resistenza</name>
+	<type>Percentage</type>
+	</MP_STAMINA>
+	<MP_SHOOTING_ABILITY>
+	<id>MP{0}_SHOOTING_ABILITY</id>
+	<name>Mira</name>
+	<type>Percentage</type>
+	</MP_SHOOTING_ABILITY>
+	<MP_STRENGTH>
+	<id>MP{0}_STRENGTH</id>
+	<name>Forza</name>
+	<type>Percentage</type>
+	</MP_STRENGTH>
+	<MP_STEALTH_ABILITY>
+	<id>MP{0}_STEALTH_ABILITY</id>
+	<name>Furtività</name>
+	<type>Percentage</type>
+	</MP_STEALTH_ABILITY>
+	<MP_FLYING_ABILITY>
+	<id>MP{0}_FLYING_ABILITY</id>
+	<name>Volo</name>
+	<type>Percentage</type>
+	</MP_FLYING_ABILITY>
+	<MP_WHEELIE_ABILITY>
+	<id>MP{0}_WHEELIE_ABILITY</id>
+	<name>Guida</name>
+	<type>Percentage</type>
+	</MP_WHEELIE_ABILITY>
+	<MP_LUNG_CAPACITY>
+	<id>MP{0}_LUNG_CAPACITY</id>
+	<name>Apnea</name>
+	<type>Percentage</type>
+	</MP_LUNG_CAPACITY>
+	<MP_PLAYER_MENTAL_STATE>
+	<id>MP{0}_PLAYER_MENTAL_STATE</id>
+	<name>Stato mentale</name>
+	<type>Percentage</type>
+	</MP_PLAYER_MENTAL_STATE>
+	</Skills>
+	<General>
+	<header_name>Generali</header_name>
+	<MP_TOTAL_PLAYING_TIME>
+	<id>MP{0}_TOTAL_PLAYING_TIME</id>
+	<name>Tempo di gioco con personaggio</name>
+	<type>duration</type>
+	</MP_TOTAL_PLAYING_TIME>
+	<MP_LONGEST_PLAYING_TIME>
+	<id>MP{0}_LONGEST_PLAYING_TIME</id>
+	<name>Sessione di gioco più lunga</name>
+	<type>duration</type>
+	</MP_LONGEST_PLAYING_TIME>
+	<MP_AVERAGE_TIME_PER_SESSON>
+	<id>MP{0}_AVERAGE_TIME_PER_SESSON</id>
+	<name>Durata media della sessione</name>
+	<type>duration</type>
+	</MP_AVERAGE_TIME_PER_SESSON>
+	<MP_DEATHS>
+	<id>MP{0}_DEATHS</id>
+	<name>Morti totali</name>
+	<type>INT</type>
+	</MP_DEATHS>
+	<MP_DIED_IN_EXPLOSION>
+	<id>MP{0}_DIED_IN_EXPLOSION</id>
+	<name>Morti per esplosione</name>
+	<type>INT</type>
+	</MP_DIED_IN_EXPLOSION>
+	<MP_DIED_IN_FALL>
+	<id>MP{0}_DIED_IN_FALL</id>
+	<name>Morti per caduta</name>
+	<type>INT</type>
+	</MP_DIED_IN_FALL>
+	<MP_DIED_IN_FIRE>
+	<id>MP{0}_DIED_IN_FIRE</id>
+	<name>Morti nelle fiamme</name>
+	<type>INT</type>
+	</MP_DIED_IN_FIRE>
+	<MP_DIED_IN_ROAD>
+	<id>MP{0}_DIED_IN_ROAD</id>
+	<name>Morti per il traffico</name>
+	<type>INT</type>
+	</MP_DIED_IN_ROAD>
+	<MP_DIED_IN_DROWNING>
+	<id>MP{0}_DIED_IN_DROWNING</id>
+	<name>Morti per annegamento</name>
+	<type>INT</type>
+	</MP_DIED_IN_DROWNING>
+	<MP_TIME_SWIMMING>
+	<id>MP{0}_TIME_SWIMMING</id>
+	<name>Tempo trascorso nuotando</name>
+	<type>duration</type>
+	</MP_TIME_SWIMMING>
+	<MP_DIST_SWIMMING>
+	<id>MP{0}_DIST_SWIMMING</id>
+	<name>Distanza percorsa nuotando</name>
+	<type>meterstomiles</type>
+	</MP_DIST_SWIMMING>
+	<MP_TIME_UNDERWATER>
+	<id>MP{0}_TIME_UNDERWATER</id>
+	<name>Tempo trascorso sott'acqua</name>
+	<type>duration</type>
+	</MP_TIME_UNDERWATER>
+	<MP_TIME_WALKING>
+	<id>MP{0}_TIME_WALKING</id>
+	<name>Tempo trascorso camminando</name>
+	<type>duration</type>
+	</MP_TIME_WALKING>
+	<MP_DIST_WALKING>
+	<id>MP{0}_DIST_WALKING</id>
+	<name>Distanza percorsa camminando</name>
+	<type>meterstomiles</type>
+	</MP_DIST_WALKING>
+	<MP_DIST_RUNNING>
+	<id>MP{0}_DIST_RUNNING</id>
+	<name>Distanza percorsa correndo</name>
+	<type>meterstomiles</type>
+	</MP_DIST_RUNNING>
+	<MP_LONGEST_SURVIVED_FREEFALL>
+	<id>MP{0}_LONGEST_SURVIVED_FREEFALL</id>
+	<name>Caduta libera più alta affrontata senza morire</name>
+	<type>meterstofeet</type>
+	</MP_LONGEST_SURVIVED_FREEFALL>
+	<MP_TIME_IN_COVER>
+	<id>MP{0}_TIME_IN_COVER</id>
+	<name>Tempo trascorso al riparo</name>
+	<type>duration</type>
+	</MP_TIME_IN_COVER>
+	<MP_NO_PHOTOS_TAKEN>
+	<id>MP{0}_NO_PHOTOS_TAKEN</id>
+	<name>Foto scattate</name>
+	<type>INT</type>
+	</MP_NO_PHOTOS_TAKEN>
+	<MP_LAP_DANCED_BOUGHT>
+	<id>MP{0}_LAP_DANCED_BOUGHT</id>
+	<name>Spettacoli privati</name>
+	<type>INT</type>
+	</MP_LAP_DANCED_BOUGHT>
+	<MP_PROSTITUTES_FREQUENTED>
+	<id>MP{0}_PROSTITUTES_FREQUENTED</id>
+	<name>Prestazioni sessuali pagate</name>
+	<type>INT</type>
+	</MP_PROSTITUTES_FREQUENTED>
+	<MP_BOUNTPLACED>
+	<id>MP{0}_BOUNTPLACED</id>
+	<name>Taglie piazzate su altri giocatori</name>
+	<type>INT</type>
+	</MP_BOUNTPLACED>
+	<MP_BOUNTSONU>
+	<id>MP{0}_BOUNTSONU</id>
+	<name>Taglie piazzate su di te</name>
+	<type>INT</type>
+	</MP_BOUNTSONU>
+	<MP_HORDELVL>
+	<id>MP{0}_HORDELVL</id>
+	<name>Ondata più alta raggiunta in modalità Sopravvivenza</name>
+	<type>INT</type>
+	</MP_HORDELVL>
+	</General>
+	<Crimes>
+	<header_name>Crimini</header_name>
+	<MP_KILLS_COP>
+	<id>MP{0}_KILLS_COP</id>
+	<name>Poliziotti uccisi</name>
+	<type>INT</type>
+	</MP_KILLS_COP>
+	<MP_KILLS_SWAT>
+	<id>MP{0}_KILLS_SWAT</id>
+	<name>NOOSE uccisi</name>
+	<type>INT</type>
+	</MP_KILLS_SWAT>
+	<MP_NO_TIMES_WANTED_LEVEL>
+	<id>MP{0}_NO_TIMES_WANTED_LEVEL</id>
+	<name>Ricercato</name>
+	<type>INT</type>
+	</MP_NO_TIMES_WANTED_LEVEL>
+	<MP_STARS_ATTAINED>
+	<id>MP{0}_STARS_ATTAINED</id>
+	<name>Stelle di sospetto ottenute</name>
+	<type>INT</type>
+	</MP_STARS_ATTAINED>
+	<MP_STARS_EVADED>
+	<id>MP{0}_STARS_EVADED</id>
+	<name>Stelle di sospetto evitate</name>
+	<type>INT</type>
+	</MP_STARS_EVADED>
+	<MP_TOTAL_CHASE_TIME>
+	<id>MP{0}_TOTAL_CHASE_TIME</id>
+	<name>Tempo passato con un livello di sospetto</name>
+	<type>duration</type>
+	</MP_TOTAL_CHASE_TIME>
+	<MP_LAST_CHASE_TIME>
+	<id>MP{0}_LAST_CHASE_TIME</id>
+	<name>Durata dell'ultimo livello di sospetto</name>
+	<type>duration</type>
+	</MP_LAST_CHASE_TIME>
+	<MP_LONGEST_CHASE_TIME>
+	<id>MP{0}_LONGEST_CHASE_TIME</id>
+	<name>Durata del livello di sospetto mantenuto più a lungo</name>
+	<type>duration</type>
+	</MP_LONGEST_CHASE_TIME>
+	<MP_TOTAL_TIME_MAX_STARS>
+	<id>MP{0}_TOTAL_TIME_MAX_STARS</id>
+	<name>Tempo trascorso con 5 stelle di sospetto</name>
+	<type>duration</type>
+	</MP_TOTAL_TIME_MAX_STARS>
+	<MP_DB_KILLS>
+	<id>MP{0}_DB_KILLS</id>
+	<name>Uccisioni in corsa come guidatore</name>
+	<type>INT</type>
+	</MP_DB_KILLS>
+	<MP_PASS_DB_KILLS>
+	<id>MP{0}_PASS_DB_KILLS</id>
+	<name>Uccisioni in corsa come passeggero</name>
+	<type>INT</type>
+	</MP_PASS_DB_KILLS>
+	<MP_TIRES_POPPED_BY_GUNSHOT>
+	<id>MP{0}_TIRES_POPPED_BY_GUNSHOT</id>
+	<name>Pneumatici distrutti</name>
+	<type>INT</type>
+	</MP_TIRES_POPPED_BY_GUNSHOT>
+	<MP_HIGHEST_SKITTLES>
+	<id>MP{0}_HIGHEST_SKITTLES</id>
+	<name>Uccisioni con veicoli</name>
+	<type>INT</type>
+	</MP_HIGHEST_SKITTLES>
+	<MP_NUMBER_STOLEN_CARS>
+	<id>MP{0}_NUMBER_STOLEN_CARS</id>
+	<name>Auto rubate</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_CARS>
+	<MP_NUMBER_STOLEN_BIKES>
+	<id>MP{0}_NUMBER_STOLEN_BIKES</id>
+	<name>Motociclette rubate</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BIKES>
+	<MP_NUMBER_STOLEN_HELIS>
+	<id>MP{0}_NUMBER_STOLEN_HELIS</id>
+	<name>Elicotteri rubati</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_HELIS>
+	<MP_NUMBER_STOLEN_PLANES>
+	<id>MP{0}_NUMBER_STOLEN_PLANES</id>
+	<name>Aerei rubati</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_PLANES>
+	<MP_NUMBER_STOLEN_BOATS>
+	<id>MP{0}_NUMBER_STOLEN_BOATS</id>
+	<name>Barche rubate</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BOATS>
+	<MP_NUMBER_STOLEN_QUADBIKES>
+	<id>MP{0}_NUMBER_STOLEN_QUADBIKES</id>
+	<name>Quad rubati</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_QUADBIKES>
+	<MP_NUMBER_STOLEN_BICYCLES>
+	<id>MP{0}_NUMBER_STOLEN_BICYCLES</id>
+	<name>Biciclette rubate</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BICYCLES>
+	<MP_NUMBER_STOLEN_COP_VEHICLE>
+	<id>MP{0}_NUMBER_STOLEN_COP_VEHICLE</id>
+	<name>Veicoli della polizia rubati</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_COP_VEHICLE>
+	<MP_TOTAL_NO_SHOPS_HELD_UP>
+	<id>MP{0}_TOTAL_NO_SHOPS_HELD_UP</id>
+	<name>Negozi rapinati</name>
+	<type>INT</type>
+	</MP_TOTAL_NO_SHOPS_HELD_UP>
+	</Crimes>
+	<Vehicles>
+	<header_name>Veicoli</header_name>
+	<MP_TIME_DRIVING_CAR>
+	<id>MP{0}_TIME_DRIVING_CAR</id>
+	<name>Tempo trascorso alla guida di macchine</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_CAR>
+	<MP_DIST_CAR>
+	<id>MP{0}_DIST_CAR</id>
+	<name>Distanza percorsa in macchina</name>
+	<type>meterstomiles</type>
+	</MP_DIST_CAR>
+	<MP_TIME_DRIVING_BIKE>
+	<id>MP{0}_TIME_DRIVING_BIKE</id>
+	<name>Tempo trascorso alla guida di moto</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BIKE>
+	<MP_DIST_BIKE>
+	<id>MP{0}_DIST_BIKE</id>
+	<name>Distanza percorsa in moto</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BIKE>
+	<MP_TIME_DRIVING_HELI>
+	<id>MP{0}_TIME_DRIVING_HELI</id>
+	<name>Tempo trascorso al comando di un elicottero</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_HELI>
+	<MP_DIST_HELI>
+	<id>MP{0}_DIST_HELI</id>
+	<name>Distanza percorsa in elicottero</name>
+	<type>meterstomiles</type>
+	</MP_DIST_HELI>
+	<MP_TIME_DRIVING_PLANE>
+	<id>MP{0}_TIME_DRIVING_PLANE</id>
+	<name>Tempo trascorso al comando di un aereo</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_PLANE>
+	<MP_DIST_PLANE>
+	<id>MP{0}_DIST_PLANE</id>
+	<name>Distanza percorsa in aereo</name>
+	<type>meterstomiles</type>
+	</MP_DIST_PLANE>
+	<MP_TIME_DRIVING_BOAT>
+	<id>MP{0}_TIME_DRIVING_BOAT</id>
+	<name>Tempo trascorso al comando di una barca</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BOAT>
+	<MP_DIST_BOAT>
+	<id>MP{0}_DIST_BOAT</id>
+	<name>Distanza percorsa in barca</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BOAT>
+	<MP_TIME_DRIVING_QUADBIKE>
+	<id>MP{0}_TIME_DRIVING_QUADBIKE</id>
+	<name>Tempo trascorso alla guida di quad</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_QUADBIKE>
+	<MP_DIST_QUADBIKE>
+	<id>MP{0}_DIST_QUADBIKE</id>
+	<name>Distanza percorsa in quad</name>
+	<type>meterstomiles</type>
+	</MP_DIST_QUADBIKE>
+	<MP_TIME_DRIVING_BICYCLE>
+	<id>MP{0}_TIME_DRIVING_BICYCLE</id>
+	<name>Tempo trascorso alla guida di bici</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BICYCLE>
+	<MP_DIST_BICYCLE>
+	<id>MP{0}_DIST_BICYCLE</id>
+	<name>Distanza percorsa in bici</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BICYCLE>
+	<MP_FASTEST_SPEED>
+	<id>MP{0}_FASTEST_SPEED</id>
+	<name>Velocità massima raggiunta in macchina</name>
+	<type>kphtomph</type>
+	</MP_FASTEST_SPEED>
+	<MP_LONGEST_STOPPIE_DIST>
+	<id>MP{0}_LONGEST_STOPPIE_DIST</id>
+	<name>Frenata sulla ruota anteriore più lunga</name>
+	<type>METERS</type>
+	</MP_LONGEST_STOPPIE_DIST>
+	<MP_LONGEST_WHEELIE_DIST>
+	<id>MP{0}_LONGEST_WHEELIE_DIST</id>
+	<name>Impennata più lunga</name>
+	<type>METERS</type>
+	</MP_LONGEST_WHEELIE_DIST>
+	<MP_LONGEST_DRIVE_NOCRASH>
+	<id>MP{0}_LONGEST_DRIVE_NOCRASH</id>
+	<name>Distanza più lunga percorsa alla guida senza incidenti</name>
+	<type>meterstomiles</type>
+	</MP_LONGEST_DRIVE_NOCRASH>
+	<MP_NUMBER_CRASHES_CARS>
+	<id>MP{0}_NUMBER_CRASHES_CARS</id>
+	<name>Incidenti in auto</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_CARS>
+	<MP_NUMBER_CRASHES_BIKES>
+	<id>MP{0}_NUMBER_CRASHES_BIKES</id>
+	<name>Incidenti in moto</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_BIKES>
+	<MP_NUMBER_CRASHES_QUADBIKES>
+	<id>MP{0}_NUMBER_CRASHES_QUADBIKES</id>
+	<name>Incidenti in quad</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_QUADBIKES>
+	<MP_BAILED_FROM_VEHICLE>
+	<id>MP{0}_BAILED_FROM_VEHICLE</id>
+	<name>Salti da un veicolo in corsa</name>
+	<type>INT</type>
+	</MP_BAILED_FROM_VEHICLE>
+	<MP_FARTHEST_JUMP_DIST>
+	<id>MP{0}_FARTHEST_JUMP_DIST</id>
+	<name>Salto più lungo con veicoli</name>
+	<type>METERS</type>
+	</MP_FARTHEST_JUMP_DIST>
+	<MP_HIGHEST_JUMP_REACHED>
+	<id>MP{0}_HIGHEST_JUMP_REACHED</id>
+	<name>Salto più alto con veicoli</name>
+	<type>METERS</type>
+	</MP_HIGHEST_JUMP_REACHED>
+	<MP_MOST_FLIPS_IN_ONE_JUMP>
+	<id>MP{0}_MOST_FLIPS_IN_ONE_JUMP</id>
+	<name>Numero massimo di ribaltamenti in salto con veicoli</name>
+	<type>INT</type>
+	</MP_MOST_FLIPS_IN_ONE_JUMP>
+	<MP_MOST_SPINS_IN_ONE_JUMP>
+	<id>MP{0}_MOST_SPINS_IN_ONE_JUMP</id>
+	<name>Numero massimo di testacoda in salto con veicoli</name>
+	<type>INT</type>
+	</MP_MOST_SPINS_IN_ONE_JUMP>
+	<MP_USJS_FOUND>
+	<id>MP{0}_USJS_FOUND</id>
+	<name>Acrobazie folli trovate</name>
+	<type>INT</type>
+	</MP_USJS_FOUND>
+	<MP_USJS_COMPLETED>
+	<id>MP{0}_USJS_COMPLETED</id>
+	<name>Acrobazie folli eseguite</name>
+	<type>INT</type>
+	</MP_USJS_COMPLETED>
+	<MP_NUMBER_NEAR_MISS>
+	<id>MP{0}_NUMBER_NEAR_MISS</id>
+	<name>Mancate collisioni</name>
+	<type>INT</type>
+	</MP_NUMBER_NEAR_MISS>
+	<MP_CARS_COPS_EXPLODED>
+	<id>MP{0}_CARS_COPS_EXPLODED</id>
+	<name>Auto della polizia fatte esplodere</name>
+	<type>INT</type>
+	</MP_CARS_COPS_EXPLODED>
+	<MP_CARS_EXPLODED>
+	<id>MP{0}_CARS_EXPLODED</id>
+	<name>Auto fatte esplodere</name>
+	<type>INT</type>
+	</MP_CARS_EXPLODED>
+	<MP_BIKES_EXPLODED>
+	<id>MP{0}_BIKES_EXPLODED</id>
+	<name>Moto fatte esplodere</name>
+	<type>INT</type>
+	</MP_BIKES_EXPLODED>
+	<MP_HELIS_EXPLODED>
+	<id>MP{0}_HELIS_EXPLODED</id>
+	<name>Elicotteri fatti esplodere</name>
+	<type>INT</type>
+	</MP_HELIS_EXPLODED>
+	<MP_PLANES_EXPLODED>
+	<id>MP{0}_PLANES_EXPLODED</id>
+	<name>Aerei fatti esplodere</name>
+	<type>INT</type>
+	</MP_PLANES_EXPLODED>
+	<MP_BOATS_EXPLODED>
+	<id>MP{0}_BOATS_EXPLODED</id>
+	<name>Barche fatte esplodere</name>
+	<type>INT</type>
+	</MP_BOATS_EXPLODED>
+	<MP_QUADBIKE_EXPLODED>
+	<id>MP{0}_QUADBIKE_EXPLODED</id>
+	<name>Quad fatti esplodere</name>
+	<type>INT</type>
+	</MP_QUADBIKE_EXPLODED>
+	<MP_NO_CARS_REPAIR>
+	<id>MP{0}_NO_CARS_REPAIR</id>
+	<name>Veicoli riparati</name>
+	<type>INT</type>
+	</MP_NO_CARS_REPAIR>
+	<MP_VEHICLES_SPRAYED>
+	<id>MP{0}_VEHICLES_SPRAYED</id>
+	<name>Veicoli riverniciati</name>
+	<type>INT</type>
+	</MP_VEHICLES_SPRAYED>
+	<MP_VEHEXPORTED>
+	<id>MP{0}_VEHEXPORTED</id>
+	<name>Macchine esportate</name>
+	<type>INT</type>
+	</MP_VEHEXPORTED>
+	</Vehicles>
+	<Cash>
+	<header_name>Denaro</header_name>
+	<MP_MONEY_SPENT_WEAPON_ARMOR>
+	<id>MP{0}_MONEY_SPENT_WEAPON_ARMOR</id>
+	<name>Spesi in armi e giubbotti antiproiettile</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_WEAPON_ARMOR>
+	<MP_MONEY_SPENT_VEH_MAINTENANCE>
+	<id>MP{0}_MONEY_SPENT_VEH_MAINTENANCE</id>
+	<name>Spesi in veicoli e manutenzione</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_VEH_MAINTENANCE>
+	<MP_MONEY_SPENT_STYLE_ENT>
+	<id>MP{0}_MONEY_SPENT_STYLE_ENT</id>
+	<name>Spesi in moda e intrattenimento</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_STYLE_ENT>
+	<MP_MONEY_SPENT_PROPERTY_UTIL>
+	<id>MP{0}_MONEY_SPENT_PROPERTY_UTIL</id>
+	<name>Spesi in proprietà e gestione</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_PROPERTY_UTIL>
+	<MP_MONEY_SPENT_JOB_ACTIVITY>
+	<id>MP{0}_MONEY_SPENT_JOB_ACTIVITY</id>
+	<name>Spesi in tariffe d'ingresso per lavori e attività</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_JOB_ACTIVITY>
+	<MP_MONEY_SPENT_BETTING>
+	<id>MP{0}_MONEY_SPENT_BETTING</id>
+	<name>Spesi in scommesse</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_BETTING>
+	<MP_MONEY_SPENT_CONTACT_SERVICE>
+	<id>MP{0}_MONEY_SPENT_CONTACT_SERVICE</id>
+	<name>Spesi in servizi di contatto</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_CONTACT_SERVICE>
+	<MP_MONEY_SPENT_HEALTHCARE>
+	<id>MP{0}_MONEY_SPENT_HEALTHCARE</id>
+	<name>Spesi in cure mediche e cauzioni</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_HEALTHCARE>
+	<MP_MONEY_SPENT_DROPPED_STOLEN>
+	<id>MP{0}_MONEY_SPENT_DROPPED_STOLEN</id>
+	<name>Persi o rubati</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_DROPPED_STOLEN>
+	<MP_MONEY_SPENT_SHARED>
+	<id>MP{0}_MONEY_SPENT_SHARED</id>
+	<name>Soldi dell'attività condivisi con altri</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_SHARED>
+	<MP_MONEY_EARN_JOBS>
+	<id>MP{0}_MONEY_EARN_JOBS</id>
+	<name>Guadagnati lavorando</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_JOBS>
+	<MP_MONEY_EARN_SELLING_VEH>
+	<id>MP{0}_MONEY_EARN_SELLING_VEH</id>
+	<name>Guadagnati vendendo veicoli</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_SELLING_VEH>
+	<MP_MONEY_EARN_BETTING>
+	<id>MP{0}_MONEY_EARN_BETTING</id>
+	<name>Guadagnati con le scommesse</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_BETTING>
+	<MP_MONEY_EARN_GOOD_SPORT>
+	<id>MP{0}_MONEY_EARN_GOOD_SPORT</id>
+	<name>Guadagnati con le ricompense per ottima sportività</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_GOOD_SPORT>
+	<MP_MONEY_EARN_PICKED_UP>
+	<id>MP{0}_MONEY_EARN_PICKED_UP</id>
+	<name>Raccolti</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_PICKED_UP>
+	<MP_MONEY_EARN_SHARED>
+	<id>MP{0}_MONEY_EARN_SHARED</id>
+	<name>Ricevuti da altri</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_SHARED>
+	</Cash>
+	<Combat>
+	<header_name>Combattimento</header_name>
+	<MP_SHOTS>
+	<id>MP{0}_SHOTS</id>
+	<name>Colpi sparati</name>
+	<type>INT</type>
+	</MP_SHOTS>
+	<MP_HITS_PEDS_VEHICLES>
+	<id>MP{0}_HITS_PEDS_VEHICLES</id>
+	<name>Colpi a segno</name>
+	<type>INT</type>
+	</MP_HITS_PEDS_VEHICLES>
+	<MP_WEAPON_ACCURACY>
+	<id>MP{0}_WEAPON_ACCURACY</id>
+	<name>Mira</name>
+	<type>Percentage</type>
+	</MP_WEAPON_ACCURACY>
+	<MP_KILLS>
+	<id>MP{0}_KILLS</id>
+	<name>Uccisioni</name>
+	<type>INT</type>
+	</MP_KILLS>
+	<MP_HEADSHOTS>
+	<id>MP{0}_HEADSHOTS</id>
+	<name>Uccisioni con colpi alla testa</name>
+	<type>INT</type>
+	</MP_HEADSHOTS>
+	<MP_KILLS_ARMED>
+	<id>MP{0}_KILLS_ARMED</id>
+	<name>Uccisioni con armi</name>
+	<type>INT</type>
+	</MP_KILLS_ARMED>
+	<MP_KILLS_IN_FREE_AIM>
+	<id>MP{0}_KILLS_IN_FREE_AIM</id>
+	<name>Uccisioni con mira libera</name>
+	<type>INT</type>
+	</MP_KILLS_IN_FREE_AIM>
+	<MP_KILLS_STEALTH>
+	<id>MP{0}_KILLS_STEALTH</id>
+	<name>Uccisioni furtive</name>
+	<type>INT</type>
+	</MP_KILLS_STEALTH>
+	<MP_SUCCESSFUL_COUNTERS>
+	<id>MP{0}_SUCCESSFUL_COUNTERS</id>
+	<name>Contrattacchi</name>
+	<type>INT</type>
+	</MP_SUCCESSFUL_COUNTERS>
+	<MP_KILLS_PLAYERS>
+	<id>MP{0}_KILLS_PLAYERS</id>
+	<name>Giocatori uccisi</name>
+	<type>INT</type>
+	</MP_KILLS_PLAYERS>
+	<MP_PLAYER_HEADSHOTS>
+	<id>MP{0}_PLAYER_HEADSHOTS</id>
+	<name>Uccisioni con colpi alla testa</name>
+	<type>INT</type>
+	</MP_PLAYER_HEADSHOTS>
+	<MP_HORDKILLS>
+	<id>MP{0}_HORDKILLS</id>
+	<name>Uccisioni in modalità Sopravvivenza</name>
+	<type>INT</type>
+	</MP_HORDKILLS>
+	<MP_GHKILLS>
+	<id>MP{0}_GHKILLS</id>
+	<name>Uccisioni in modalità Attacco Banda</name>
+	<type>INT</type>
+	</MP_GHKILLS>
+	<MP_DM_HIGHEST_KILLSTREAK>
+	<id>MP{0}_DM_HIGHEST_KILLSTREAK</id>
+	<name>Serie di uccisioni più lunga in deathmatch</name>
+	<type>INT</type>
+	</MP_DM_HIGHEST_KILLSTREAK>
+	<MP_ARCHENEMY_KILLS>
+	<id>MP{0}_ARCHENEMY_KILLS</id>
+	<name>Morti per mano dell'arcinemico</name>
+	<type>INT</type>
+	</MP_ARCHENEMY_KILLS>
+	<MP_BIGGEST_VICTIM_KILLS>
+	<id>MP{0}_BIGGEST_VICTIM_KILLS</id>
+	<name>Uccisioni vittima</name>
+	<type>INT</type>
+	</MP_BIGGEST_VICTIM_KILLS>
+	</Combat>
+	<Weapons>
+	<header_name>Armi</header_name>
+	<MP_PISTOL_KILLS>
+	<id>MP{0}_PISTOL_KILLS</id>
+	<name>Uccisioni con pistola</name>
+	<type>INT</type>
+	</MP_PISTOL_KILLS>
+	<MP_CMBTPISTOL_KILLS>
+	<id>MP{0}_CMBTPISTOL_KILLS</id>
+	<name>Uccisioni con pistola da combattimento</name>
+	<type>INT</type>
+	</MP_CMBTPISTOL_KILLS>
+	<MP_APPISTOL_KILLS Comment="Conditional">
+	<id>MP{0}_APPISTOL_KILLS</id>
+	<name>Uccisioni con pistola AP</name>
+	<type>INT</type>
+	</MP_APPISTOL_KILLS>
+	<MP_SNSPISTOL_KILLS Comment="Conditional" dlc="1">
+	<id>MP{0}_SNSPISTOL_KILLS</id>
+	<name>Uccisioni con pistoletta</name>
+	<type>INT</type>
+	</MP_SNSPISTOL_KILLS>
+	<MP_HVYPISTOL_KILLS Comment="Conditional" dlc="6">
+	<id>MP{0}_HVYPISTOL_KILLS</id>
+	<name>Uccisioni con pistola pesante</name>
+	<type>INT</type>
+	</MP_HVYPISTOL_KILLS>
+	<MP_VPISTOL_KILLS Comment="Conditional" dlc="8">
+	<id>MP{0}_VPISTOL_KILLS</id>
+	<name>Uccisioni con pistola vintage</name>
+	<type>INT</type>
+	</MP_VPISTOL_KILLS>
+	<MP_MICROSMG_KILLS>
+	<id>MP{0}_MICROSMG_KILLS</id>
+	<name>Uccisioni con pistola mitragliatrice</name>
+	<type>INT</type>
+	</MP_MICROSMG_KILLS>
+	<MP_SMG_KILLS>
+	<id>MP{0}_SMG_KILLS</id>
+	<name>Uccisioni con mitra</name>
+	<type>INT</type>
+	</MP_SMG_KILLS>
+	<MP_ASLTSMG_KILLS>
+	<id>MP{0}_ASLTSMG_KILLS</id>
+	<name>Uccisioni con mitra d'assalto</name>
+	<type>INT</type>
+	</MP_ASLTSMG_KILLS>
+	<MP_GUSNBRG_KILLS Comment="Conditional" dlc="5">
+	<id>MP{0}_GUSNBRG_KILLS</id>
+	<name>Uccisioni con mitragliatrice Gusenberg</name>
+	<type>INT</type>
+	</MP_GUSNBRG_KILLS>
+	<MP_ASLTRIFLE_KILLS>
+	<id>MP{0}_ASLTRIFLE_KILLS</id>
+	<name>Uccisioni con fucile d'assalto</name>
+	<type>INT</type>
+	</MP_ASLTRIFLE_KILLS>
+	<MP_CRBNRIFLE_KILLS>
+	<id>MP{0}_CRBNRIFLE_KILLS</id>
+	<name>Uccisioni con carabina</name>
+	<type>INT</type>
+	</MP_CRBNRIFLE_KILLS>
+	<MP_ADVRIFLE_KILLS>
+	<id>MP{0}_ADVRIFLE_KILLS</id>
+	<name>Uccisioni con fucile avanzato</name>
+	<type>INT</type>
+	</MP_ADVRIFLE_KILLS>
+	<MP_BULLRIFLE_KILLS Comment="Conditional" dlc="7">
+	<id>MP{0}_BULLRIFLE_KILLS</id>
+	<name>Uccisioni con fucile Bullpup</name>
+	<type>INT</type>
+	</MP_BULLRIFLE_KILLS>
+	<MP_SPCARBINE_KILLS Comment="Conditional" dlc="6">
+	<id>MP{0}_SPCARBINE_KILLS</id>
+	<name>Uccisioni con carabina speciale</name>
+	<type>INT</type>
+	</MP_SPCARBINE_KILLS>
+	<MP_MUSKET_KILLS Comment="Conditional" dlc="9">
+	<id>MP{0}_MUSKET_KILLS</id>
+	<name>Uccisioni con moschetto</name>
+	<type>INT</type>
+	</MP_MUSKET_KILLS>
+	<MP_MKRIFLE_KILLS Comment="Conditional" dlc="11">
+	<id>MP{0}_MKRIFLE_KILLS</id>
+	<name>Uccisioni con fucile da tiratore</name>
+	<type>INT</type>
+	</MP_MKRIFLE_KILLS>
+	<MP_MG_KILLS>
+	<id>MP{0}_MG_KILLS</id>
+	<name>Uccisioni con mitragliatrice</name>
+	<type>INT</type>
+	</MP_MG_KILLS>
+	<MP_CMBTMG_KILLS>
+	<id>MP{0}_CMBTMG_KILLS</id>
+	<name>Uccisioni con mitra da combattimento</name>
+	<type>INT</type>
+	</MP_CMBTMG_KILLS>
+	<MP_PUMP_KILLS>
+	<id>MP{0}_PUMP_KILLS</id>
+	<name>Uccisioni con fucile a pompa</name>
+	<type>INT</type>
+	</MP_PUMP_KILLS>
+	<MP_SAWNOFF_KILLS Comment="Conditional">
+	<id>MP{0}_SAWNOFF_KILLS</id>
+	<name>Uccisioni con fucile a canne mozze</name>
+	<type>INT</type>
+	</MP_SAWNOFF_KILLS>
+	<MP_ASLTSHTGN_KILLS>
+	<id>MP{0}_ASLTSHTGN_KILLS</id>
+	<name>Uccisioni con fucile a pompa d'assalto</name>
+	<type>INT</type>
+	</MP_ASLTSHTGN_KILLS>
+	<MP_BULLPUP_KILLS>
+	<id>MP{0}_BULLPUP_KILLS</id>
+	<name>Uccisioni con fucile a pompa Bullpup</name>
+	<type>INT</type>
+	</MP_BULLPUP_KILLS>
+	<MP_HVYSHGN_KILLS Comment="Conditional" dlc="11">
+	<id>MP{0}_HVYSHGN_KILLS</id>
+	<name>Uccisioni con fucile a pompa pesante</name>
+	<type>INT</type>
+	</MP_HVYSHGN_KILLS>
+	<MP_SNIPERRFL_KILLS>
+	<id>MP{0}_SNIPERRFL_KILLS</id>
+	<name>Uccisioni con fucile da cecchino</name>
+	<type>INT</type>
+	</MP_SNIPERRFL_KILLS>
+	<MP_HVYSNIPER_KILLS>
+	<id>MP{0}_HVYSNIPER_KILLS</id>
+	<name>Uccisioni con fucile da cecchino pesante</name>
+	<type>INT</type>
+	</MP_HVYSNIPER_KILLS>
+	<MP_GRNLAUNCH_KILLS>
+	<id>MP{0}_GRNLAUNCH_KILLS</id>
+	<name>Uccisioni con lanciagranate</name>
+	<type>INT</type>
+	</MP_GRNLAUNCH_KILLS>
+	<MP_RPG_KILLS>
+	<id>MP{0}_RPG_KILLS</id>
+	<name>Uccisioni con lanciarazzi</name>
+	<type>INT</type>
+	</MP_RPG_KILLS>
+	<MP_FIREWRK_KILLS Comment="Conditional" dlc="9">
+	<id>MP{0}_FIREWRK_KILLS</id>
+	<name>Uccisioni con cannone pirotecnico</name>
+	<type>INT</type>
+	</MP_FIREWRK_KILLS>
+	<MP_MINIGUNS_KILLS>
+	<id>MP{0}_MINIGUNS_KILLS</id>
+	<name>Uccisioni con minigun</name>
+	<type>INT</type>
+	</MP_MINIGUNS_KILLS>
+	<MP_GRENADE_KILLS>
+	<id>MP{0}_GRENADE_KILLS</id>
+	<name>Uccisioni con granate</name>
+	<type>INT</type>
+	</MP_GRENADE_KILLS>
+	<MP_SMKGRENADE_KILLS>
+	<id>MP{0}_SMKGRENADE_KILLS</id>
+	<name>Uccisioni con gas lacrimogeno</name>
+	<type>INT</type>
+	</MP_SMKGRENADE_KILLS>
+	<MP_STKYBMB_KILLS>
+	<id>MP{0}_STKYBMB_KILLS</id>
+	<name>Uccisioni con bombe adesive</name>
+	<type>INT</type>
+	</MP_STKYBMB_KILLS>
+	<MP_MOLOTOV_KILLS>
+	<id>MP{0}_MOLOTOV_KILLS</id>
+	<name>Uccisioni con molotov</name>
+	<type>INT</type>
+	</MP_MOLOTOV_KILLS>
+	<MP_KNIFE_KILLS>
+	<id>MP{0}_KNIFE_KILLS</id>
+	<name>Uccisioni con coltello</name>
+	<type>INT</type>
+	</MP_KNIFE_KILLS>
+	<MP_NIGHTSTICK_KILLS>
+	<id>MP{0}_NIGHTSTICK_KILLS</id>
+	<name>Uccisioni con manganello</name>
+	<type>INT</type>
+	</MP_NIGHTSTICK_KILLS>
+	<MP_CROWBAR_KILLS>
+	<id>MP{0}_CROWBAR_KILLS</id>
+	<name>Uccisioni con piede di porco</name>
+	<type>INT</type>
+	</MP_CROWBAR_KILLS>
+	<MP_BAT_KILLS>
+	<id>MP{0}_BAT_KILLS</id>
+	<name>Uccisioni con mazza da baseball</name>
+	<type>INT</type>
+	</MP_BAT_KILLS>
+	<MP_GCLUB_KILLS>
+	<id>MP{0}_GCLUB_KILLS</id>
+	<name>Uccisioni con mazza da golf</name>
+	<type>INT</type>
+	</MP_GCLUB_KILLS>
+	<MP_HAMMER_KILLS Comment="Conditional" dlc="12">
+	<id>MP{0}_HAMMER_KILLS</id>
+	<name>Uccisioni con martello</name>
+	<type>INT</type>
+	</MP_HAMMER_KILLS>
+	<MP_UNARMED_KILLS>
+	<id>MP{0}_UNARMED_KILLS</id>
+	<name>Uccisioni senza armi</name>
+	<type>INT</type>
+	</MP_UNARMED_KILLS>
+	<MP_FLAREGUN_KILLS Comment="Conditional" dlc="14">
+	<id>MP{0}_FLAREGUN_KILLS</id>
+	<name>Uccisioni con pistola lanciarazzi</name>
+	<type>INT</type>
+	</MP_FLAREGUN_KILLS>
+	<MP_BOTTLE_KILLS Comment="Conditional" dlc="1">
+	<id>MP{0}_BOTTLE_KILLS</id>
+	<name>Uccisioni con bottiglia</name>
+	<type>INT</type>
+	</MP_BOTTLE_KILLS>
+	<MP_DAGGER_KILLS Comment="Conditional" dlc="8">
+	<id>MP{0}_DAGGER_KILLS</id>
+	<name>Uccisioni con pugnale antico</name>
+	<type>INT</type>
+	</MP_DAGGER_KILLS>
+	<MP_HATCHET_KILLS Comment="Conditional" dlc="13">
+	<id>MP{0}_HATCHET_KILLS</id>
+	<name>Uccisioni con accetta</name>
+	<type>INT</type>
+	</MP_HATCHET_KILLS>
+	<MP_RHINO_ROCKET_KILLS>
+	<id>MP{0}_RHINO_ROCKET_KILLS</id>
+	<name>Uccisioni con cannone Rhino</name>
+	<type>INT</type>
+	</MP_RHINO_ROCKET_KILLS>
+	<MP_BUZZARD_BULLET_KILLS>
+	<id>MP{0}_BUZZARD_BULLET_KILLS</id>
+	<name>Uccisioni con minigun Buzzard</name>
+	<type>INT</type>
+	</MP_BUZZARD_BULLET_KILLS>
+	<MP_BUZZARD_ROCKET_KILLS>
+	<id>MP{0}_BUZZARD_ROCKET_KILLS</id>
+	<name>Uccisioni con missili Buzzard</name>
+	<type>INT</type>
+	</MP_BUZZARD_ROCKET_KILLS>
+	<MP_LAZER_ROCKET_KILLS>
+	<id>MP{0}_LAZER_ROCKET_KILLS</id>
+	<name>Uccisioni con missili Lazer</name>
+	<type>INT</type>
+	</MP_LAZER_ROCKET_KILLS>
+	<MP_ANNIHL_BULLET_KILLS>
+	<id>MP{0}_ANNIHL_BULLET_KILLS</id>
+	<name>Uccisioni con minigun Annihilator</name>
+	<type>INT</type>
+	</MP_ANNIHL_BULLET_KILLS>
+	</Weapons>
+	</global>

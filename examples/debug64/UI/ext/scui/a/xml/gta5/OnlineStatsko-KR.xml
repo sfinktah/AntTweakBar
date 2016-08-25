@@ -1,0 +1,981 @@
+﻿<global>
+	<Career>
+	<header_name>경력</header_name>
+	<MPPLY_TOTAL_EVC>
+	<id>MPPLY_TOTAL_EVC</id>
+	<name>수입 합계</name>
+	<type>Money</type>
+	</MPPLY_TOTAL_EVC>
+	<MPPLY_TOTAL_SVC>
+	<id>MPPLY_TOTAL_SVC</id>
+	<name>지출 합계</name>
+	<type>Money</type>
+	</MPPLY_TOTAL_SVC>
+	<MPPLY_KILLS_PLAYERS>
+	<id>MPPLY_KILLS_PLAYERS</id>
+	<name>플레이어 사살 합계</name>
+	<type>INT</type>
+	</MPPLY_KILLS_PLAYERS>
+	<MPPLY_DEATHS_PLAYER>
+	<id>MPPLY_DEATHS_PLAYER</id>
+	<name>다른 플레이어에게 사살당한 횟수 합계</name>
+	<type>INT</type>
+	</MPPLY_DEATHS_PLAYER>
+	<MPPLY_KILL_DEATH_RATIO>
+	<id>MPPLY_KILL_DEATH_RATIO</id>
+	<name>플레이어 vs 플레이어 사살/사망 비율</name>
+	<type>DECIMAL</type>
+	</MPPLY_KILL_DEATH_RATIO>
+	<MPPLY_CHAR_DIST_TRAVELLED>
+	<id>MPPLY_CHAR_DIST_TRAVELLED</id>
+	<name>이동한 거리</name>
+	<type>meterstomiles</type>
+	</MPPLY_CHAR_DIST_TRAVELLED>
+	<MP_PLAYING_TIME>
+	<id>MP_PLAYING_TIME</id>
+	<name>GTA 온라인을 플레이한 시간</name>
+	<type>duration</type>
+	</MP_PLAYING_TIME>
+	<MP_FIRST_PERSON_CAM_TIME>
+	<id>MP_FIRST_PERSON_CAM_TIME</id>
+	<name>1인칭 시점으로 플레이한 시간</name>
+	<type>duration</type>
+	</MP_FIRST_PERSON_CAM_TIME>
+	<MPPLY_TOTAL_TIME_SPENT_DEATHMAT>
+	<id>MPPLY_TOTAL_TIME_SPENT_DEATHMAT</id>
+	<name>데스매치를 플레이한 시간</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_SPENT_DEATHMAT>
+	<MPPLY_TOTAL_TIME_SPENT_RACES>
+	<id>MPPLY_TOTAL_TIME_SPENT_RACES</id>
+	<name>레이스를 플레이한 시간</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_SPENT_RACES>
+	<MPPLY_TOTAL_TIME_MISSION_CREATO>
+	<id>MPPLY_TOTAL_TIME_MISSION_CREATO</id>
+	<name>생성기를 이용한 시간</name>
+	<type>duration</type>
+	</MPPLY_TOTAL_TIME_MISSION_CREATO>
+	<MPPLY_AWD_FM_CR_DM_MADE>
+	<id>MPPLY_AWD_FM_CR_DM_MADE</id>
+	<name>발행한 데스매치</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_DM_MADE>
+	<MPPLY_AWD_FM_CR_RACES_MADE>
+	<id>MPPLY_AWD_FM_CR_RACES_MADE</id>
+	<name>발행한 레이스</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_RACES_MADE>
+	<MPPLY_NUM_CAPTURES_CREATED>
+	<id>MPPLY_NUM_CAPTURES_CREATED</id>
+	<name>발행한 점령</name>
+	<type>INT</type>
+	</MPPLY_NUM_CAPTURES_CREATED>
+	<MPPLY_LTS_CREATED>
+	<id>MPPLY_LTS_CREATED</id>
+	<name>발행한 라스트 팀 스탠딩</name>
+	<type>INT</type>
+	</MPPLY_LTS_CREATED>
+	<MPPLY_AWD_FM_CR_PLAYED_BY_PEEP>
+	<id>MPPLY_AWD_FM_CR_PLAYED_BY_PEEP</id>
+	<name>내가 발행한 콘텐츠를 커뮤니티가 플레이한 횟수</name>
+	<type>INT</type>
+	</MPPLY_AWD_FM_CR_PLAYED_BY_PEEP>
+	<MPPLY_FM_MISSION_LIKES>
+	<id>MPPLY_FM_MISSION_LIKES</id>
+	<name>내가 발행한 콘텐츠의 좋아요 횟수</name>
+	<type>INT</type>
+	</MPPLY_FM_MISSION_LIKES>
+	</Career>
+	<Skills>
+	<header_name>능력치</header_name>
+	<MP_STAMINA>
+	<id>MP{0}_STAMINA</id>
+	<name>기력</name>
+	<type>Percentage</type>
+	</MP_STAMINA>
+	<MP_SHOOTING_ABILITY>
+	<id>MP{0}_SHOOTING_ABILITY</id>
+	<name>사격</name>
+	<type>Percentage</type>
+	</MP_SHOOTING_ABILITY>
+	<MP_STRENGTH>
+	<id>MP{0}_STRENGTH</id>
+	<name>힘</name>
+	<type>Percentage</type>
+	</MP_STRENGTH>
+	<MP_STEALTH_ABILITY>
+	<id>MP{0}_STEALTH_ABILITY</id>
+	<name>은신</name>
+	<type>Percentage</type>
+	</MP_STEALTH_ABILITY>
+	<MP_FLYING_ABILITY>
+	<id>MP{0}_FLYING_ABILITY</id>
+	<name>비행</name>
+	<type>Percentage</type>
+	</MP_FLYING_ABILITY>
+	<MP_WHEELIE_ABILITY>
+	<id>MP{0}_WHEELIE_ABILITY</id>
+	<name>운전</name>
+	<type>Percentage</type>
+	</MP_WHEELIE_ABILITY>
+	<MP_LUNG_CAPACITY>
+	<id>MP{0}_LUNG_CAPACITY</id>
+	<name>폐활량</name>
+	<type>Percentage</type>
+	</MP_LUNG_CAPACITY>
+	<MP_PLAYER_MENTAL_STATE>
+	<id>MP{0}_PLAYER_MENTAL_STATE</id>
+	<name>사이코 수치</name>
+	<type>Percentage</type>
+	</MP_PLAYER_MENTAL_STATE>
+	</Skills>
+	<General>
+	<header_name>일반</header_name>
+	<MP_TOTAL_PLAYING_TIME>
+	<id>MP{0}_TOTAL_PLAYING_TIME</id>
+	<name>캐릭터로 플레이한 시간</name>
+	<type>duration</type>
+	</MP_TOTAL_PLAYING_TIME>
+	<MP_LONGEST_PLAYING_TIME>
+	<id>MP{0}_LONGEST_PLAYING_TIME</id>
+	<name>최장 세션 플레이 시간</name>
+	<type>duration</type>
+	</MP_LONGEST_PLAYING_TIME>
+	<MP_AVERAGE_TIME_PER_SESSON>
+	<id>MP{0}_AVERAGE_TIME_PER_SESSON</id>
+	<name>세션당 평균 시간</name>
+	<type>duration</type>
+	</MP_AVERAGE_TIME_PER_SESSON>
+	<MP_DEATHS>
+	<id>MP{0}_DEATHS</id>
+	<name>사망 횟수 합계</name>
+	<type>INT</type>
+	</MP_DEATHS>
+	<MP_DIED_IN_EXPLOSION>
+	<id>MP{0}_DIED_IN_EXPLOSION</id>
+	<name>폭발로 사망</name>
+	<type>INT</type>
+	</MP_DIED_IN_EXPLOSION>
+	<MP_DIED_IN_FALL>
+	<id>MP{0}_DIED_IN_FALL</id>
+	<name>추락으로 사망</name>
+	<type>INT</type>
+	</MP_DIED_IN_FALL>
+	<MP_DIED_IN_FIRE>
+	<id>MP{0}_DIED_IN_FIRE</id>
+	<name>화재로 사망</name>
+	<type>INT</type>
+	</MP_DIED_IN_FIRE>
+	<MP_DIED_IN_ROAD>
+	<id>MP{0}_DIED_IN_ROAD</id>
+	<name>교통사고로 사망</name>
+	<type>INT</type>
+	</MP_DIED_IN_ROAD>
+	<MP_DIED_IN_DROWNING>
+	<id>MP{0}_DIED_IN_DROWNING</id>
+	<name>물에 빠져 사망</name>
+	<type>INT</type>
+	</MP_DIED_IN_DROWNING>
+	<MP_TIME_SWIMMING>
+	<id>MP{0}_TIME_SWIMMING</id>
+	<name>수영한 시간</name>
+	<type>duration</type>
+	</MP_TIME_SWIMMING>
+	<MP_DIST_SWIMMING>
+	<id>MP{0}_DIST_SWIMMING</id>
+	<name>헤엄쳐서 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_SWIMMING>
+	<MP_TIME_UNDERWATER>
+	<id>MP{0}_TIME_UNDERWATER</id>
+	<name>물속에서 보낸 시간</name>
+	<type>duration</type>
+	</MP_TIME_UNDERWATER>
+	<MP_TIME_WALKING>
+	<id>MP{0}_TIME_WALKING</id>
+	<name>걸어 다닌 시간</name>
+	<type>duration</type>
+	</MP_TIME_WALKING>
+	<MP_DIST_WALKING>
+	<id>MP{0}_DIST_WALKING</id>
+	<name>걸어서 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_WALKING>
+	<MP_DIST_RUNNING>
+	<id>MP{0}_DIST_RUNNING</id>
+	<name>달려서 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_RUNNING>
+	<MP_LONGEST_SURVIVED_FREEFALL>
+	<id>MP{0}_LONGEST_SURVIVED_FREEFALL</id>
+	<name>생존한 자유 낙하 최고 높이</name>
+	<type>meterstofeet</type>
+	</MP_LONGEST_SURVIVED_FREEFALL>
+	<MP_TIME_IN_COVER>
+	<id>MP{0}_TIME_IN_COVER</id>
+	<name>엄폐한 시간</name>
+	<type>duration</type>
+	</MP_TIME_IN_COVER>
+	<MP_NO_PHOTOS_TAKEN>
+	<id>MP{0}_NO_PHOTOS_TAKEN</id>
+	<name>찍은 사진</name>
+	<type>INT</type>
+	</MP_NO_PHOTOS_TAKEN>
+	<MP_LAP_DANCED_BOUGHT>
+	<id>MP{0}_LAP_DANCED_BOUGHT</id>
+	<name>은밀한 춤</name>
+	<type>INT</type>
+	</MP_LAP_DANCED_BOUGHT>
+	<MP_PROSTITUTES_FREQUENTED>
+	<id>MP{0}_PROSTITUTES_FREQUENTED</id>
+	<name>섹스 관련 지불 금액</name>
+	<type>INT</type>
+	</MP_PROSTITUTES_FREQUENTED>
+	<MP_BOUNTPLACED>
+	<id>MP{0}_BOUNTPLACED</id>
+	<name>다른 플레이어에게 건 현상금</name>
+	<type>INT</type>
+	</MP_BOUNTPLACED>
+	<MP_BOUNTSONU>
+	<id>MP{0}_BOUNTSONU</id>
+	<name>나에게 걸린 현상금</name>
+	<type>INT</type>
+	</MP_BOUNTSONU>
+	<MP_HORDELVL>
+	<id>MP{0}_HORDELVL</id>
+	<name>서바이벌에서 최다 공세 기록</name>
+	<type>INT</type>
+	</MP_HORDELVL>
+	</General>
+	<Crimes>
+	<header_name>범죄</header_name>
+	<MP_KILLS_COP>
+	<id>MP{0}_KILLS_COP</id>
+	<name>사살한 경찰</name>
+	<type>INT</type>
+	</MP_KILLS_COP>
+	<MP_KILLS_SWAT>
+	<id>MP{0}_KILLS_SWAT</id>
+	<name>사살한 NOOSE 대원</name>
+	<type>INT</type>
+	</MP_KILLS_SWAT>
+	<MP_NO_TIMES_WANTED_LEVEL>
+	<id>MP{0}_NO_TIMES_WANTED_LEVEL</id>
+	<name>지명수배 횟수</name>
+	<type>INT</type>
+	</MP_NO_TIMES_WANTED_LEVEL>
+	<MP_STARS_ATTAINED>
+	<id>MP{0}_STARS_ATTAINED</id>
+	<name>지명수배 별 획득 수</name>
+	<type>INT</type>
+	</MP_STARS_ATTAINED>
+	<MP_STARS_EVADED>
+	<id>MP{0}_STARS_EVADED</id>
+	<name>지명수배 별 감소 수</name>
+	<type>INT</type>
+	</MP_STARS_EVADED>
+	<MP_TOTAL_CHASE_TIME>
+	<id>MP{0}_TOTAL_CHASE_TIME</id>
+	<name>지명수배 상태로 보낸 시간</name>
+	<type>duration</type>
+	</MP_TOTAL_CHASE_TIME>
+	<MP_LAST_CHASE_TIME>
+	<id>MP{0}_LAST_CHASE_TIME</id>
+	<name>최근 지명수배 시간</name>
+	<type>duration</type>
+	</MP_LAST_CHASE_TIME>
+	<MP_LONGEST_CHASE_TIME>
+	<id>MP{0}_LONGEST_CHASE_TIME</id>
+	<name>최장 지명수배 시간</name>
+	<type>duration</type>
+	</MP_LONGEST_CHASE_TIME>
+	<MP_TOTAL_TIME_MAX_STARS>
+	<id>MP{0}_TOTAL_TIME_MAX_STARS</id>
+	<name>지명수배 5단계로 보낸 시간</name>
+	<type>duration</type>
+	</MP_TOTAL_TIME_MAX_STARS>
+	<MP_DB_KILLS>
+	<id>MP{0}_DB_KILLS</id>
+	<name>운전 중 총격으로 사살</name>
+	<type>INT</type>
+	</MP_DB_KILLS>
+	<MP_PASS_DB_KILLS>
+	<id>MP{0}_PASS_DB_KILLS</id>
+	<name>탑승객 상태에서 총격으로 사살</name>
+	<type>INT</type>
+	</MP_PASS_DB_KILLS>
+	<MP_TIRES_POPPED_BY_GUNSHOT>
+	<id>MP{0}_TIRES_POPPED_BY_GUNSHOT</id>
+	<name>파손시킨 타이어</name>
+	<type>INT</type>
+	</MP_TIRES_POPPED_BY_GUNSHOT>
+	<MP_HIGHEST_SKITTLES>
+	<id>MP{0}_HIGHEST_SKITTLES</id>
+	<name>이동 수단으로 사살</name>
+	<type>INT</type>
+	</MP_HIGHEST_SKITTLES>
+	<MP_NUMBER_STOLEN_CARS>
+	<id>MP{0}_NUMBER_STOLEN_CARS</id>
+	<name>훔친 자동차</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_CARS>
+	<MP_NUMBER_STOLEN_BIKES>
+	<id>MP{0}_NUMBER_STOLEN_BIKES</id>
+	<name>훔친 오토바이</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BIKES>
+	<MP_NUMBER_STOLEN_HELIS>
+	<id>MP{0}_NUMBER_STOLEN_HELIS</id>
+	<name>훔친 헬리콥터</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_HELIS>
+	<MP_NUMBER_STOLEN_PLANES>
+	<id>MP{0}_NUMBER_STOLEN_PLANES</id>
+	<name>훔친 비행기</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_PLANES>
+	<MP_NUMBER_STOLEN_BOATS>
+	<id>MP{0}_NUMBER_STOLEN_BOATS</id>
+	<name>훔친 보트</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BOATS>
+	<MP_NUMBER_STOLEN_QUADBIKES>
+	<id>MP{0}_NUMBER_STOLEN_QUADBIKES</id>
+	<name>훔친 ATV</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_QUADBIKES>
+	<MP_NUMBER_STOLEN_BICYCLES>
+	<id>MP{0}_NUMBER_STOLEN_BICYCLES</id>
+	<name>훔친 자전거</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_BICYCLES>
+	<MP_NUMBER_STOLEN_COP_VEHICLE>
+	<id>MP{0}_NUMBER_STOLEN_COP_VEHICLE</id>
+	<name>훔친 경찰차량</name>
+	<type>INT</type>
+	</MP_NUMBER_STOLEN_COP_VEHICLE>
+	<MP_TOTAL_NO_SHOPS_HELD_UP>
+	<id>MP{0}_TOTAL_NO_SHOPS_HELD_UP</id>
+	<name>상점 강탈 횟수</name>
+	<type>INT</type>
+	</MP_TOTAL_NO_SHOPS_HELD_UP>
+	</Crimes>
+	<Vehicles>
+	<header_name>이동 수단</header_name>
+	<MP_TIME_DRIVING_CAR>
+	<id>MP{0}_TIME_DRIVING_CAR</id>
+	<name>자동자 운전 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_CAR>
+	<MP_DIST_CAR>
+	<id>MP{0}_DIST_CAR</id>
+	<name>자동차로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_CAR>
+	<MP_TIME_DRIVING_BIKE>
+	<id>MP{0}_TIME_DRIVING_BIKE</id>
+	<name>오토바이 탑승 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BIKE>
+	<MP_DIST_BIKE>
+	<id>MP{0}_DIST_BIKE</id>
+	<name>오토바이로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BIKE>
+	<MP_TIME_DRIVING_HELI>
+	<id>MP{0}_TIME_DRIVING_HELI</id>
+	<name>헬리콥터 비행 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_HELI>
+	<MP_DIST_HELI>
+	<id>MP{0}_DIST_HELI</id>
+	<name>헬리콥터로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_HELI>
+	<MP_TIME_DRIVING_PLANE>
+	<id>MP{0}_TIME_DRIVING_PLANE</id>
+	<name>비행기 조종 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_PLANE>
+	<MP_DIST_PLANE>
+	<id>MP{0}_DIST_PLANE</id>
+	<name>비행기로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_PLANE>
+	<MP_TIME_DRIVING_BOAT>
+	<id>MP{0}_TIME_DRIVING_BOAT</id>
+	<name>보트 조종 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BOAT>
+	<MP_DIST_BOAT>
+	<id>MP{0}_DIST_BOAT</id>
+	<name>보트로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BOAT>
+	<MP_TIME_DRIVING_QUADBIKE>
+	<id>MP{0}_TIME_DRIVING_QUADBIKE</id>
+	<name>ATV 탑승 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_QUADBIKE>
+	<MP_DIST_QUADBIKE>
+	<id>MP{0}_DIST_QUADBIKE</id>
+	<name>ATV로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_QUADBIKE>
+	<MP_TIME_DRIVING_BICYCLE>
+	<id>MP{0}_TIME_DRIVING_BICYCLE</id>
+	<name>자전거 탑승 시간</name>
+	<type>duration</type>
+	</MP_TIME_DRIVING_BICYCLE>
+	<MP_DIST_BICYCLE>
+	<id>MP{0}_DIST_BICYCLE</id>
+	<name>자전거로 이동한 거리</name>
+	<type>meterstomiles</type>
+	</MP_DIST_BICYCLE>
+	<MP_FASTEST_SPEED>
+	<id>MP{0}_FASTEST_SPEED</id>
+	<name>차량으로 도달한 최고 속도</name>
+	<type>kphtomph</type>
+	</MP_FASTEST_SPEED>
+	<MP_LONGEST_STOPPIE_DIST>
+	<id>MP{0}_LONGEST_STOPPIE_DIST</id>
+	<name>뒷바퀴 들고 주행한 최장 거리</name>
+	<type>METERS</type>
+	</MP_LONGEST_STOPPIE_DIST>
+	<MP_LONGEST_WHEELIE_DIST>
+	<id>MP{0}_LONGEST_WHEELIE_DIST</id>
+	<name>앞바퀴 들고 주행한 최장 거리</name>
+	<type>METERS</type>
+	</MP_LONGEST_WHEELIE_DIST>
+	<MP_LONGEST_DRIVE_NOCRASH>
+	<id>MP{0}_LONGEST_DRIVE_NOCRASH</id>
+	<name>충돌없이 운전한 최장 시간</name>
+	<type>meterstomiles</type>
+	</MP_LONGEST_DRIVE_NOCRASH>
+	<MP_NUMBER_CRASHES_CARS>
+	<id>MP{0}_NUMBER_CRASHES_CARS</id>
+	<name>자동차 충돌</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_CARS>
+	<MP_NUMBER_CRASHES_BIKES>
+	<id>MP{0}_NUMBER_CRASHES_BIKES</id>
+	<name>오토바이 충돌</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_BIKES>
+	<MP_NUMBER_CRASHES_QUADBIKES>
+	<id>MP{0}_NUMBER_CRASHES_QUADBIKES</id>
+	<name>ATV 충돌</name>
+	<type>INT</type>
+	</MP_NUMBER_CRASHES_QUADBIKES>
+	<MP_BAILED_FROM_VEHICLE>
+	<id>MP{0}_BAILED_FROM_VEHICLE</id>
+	<name>달리는 이동 수단에서 탈출</name>
+	<type>INT</type>
+	</MP_BAILED_FROM_VEHICLE>
+	<MP_FARTHEST_JUMP_DIST>
+	<id>MP{0}_FARTHEST_JUMP_DIST</id>
+	<name>차량 점프 최장 거리</name>
+	<type>METERS</type>
+	</MP_FARTHEST_JUMP_DIST>
+	<MP_HIGHEST_JUMP_REACHED>
+	<id>MP{0}_HIGHEST_JUMP_REACHED</id>
+	<name>차량 점프 최고 높이</name>
+	<type>METERS</type>
+	</MP_HIGHEST_JUMP_REACHED>
+	<MP_MOST_FLIPS_IN_ONE_JUMP>
+	<id>MP{0}_MOST_FLIPS_IN_ONE_JUMP</id>
+	<name>1회의 차량 점프로 기록한 수직 회전 최고 기록</name>
+	<type>INT</type>
+	</MP_MOST_FLIPS_IN_ONE_JUMP>
+	<MP_MOST_SPINS_IN_ONE_JUMP>
+	<id>MP{0}_MOST_SPINS_IN_ONE_JUMP</id>
+	<name>1회의 차량 점프로 기록한 수평 회전 최고 기록</name>
+	<type>INT</type>
+	</MP_MOST_SPINS_IN_ONE_JUMP>
+	<MP_USJS_FOUND>
+	<id>MP{0}_USJS_FOUND</id>
+	<name>독특한 스턴트 점프 발견</name>
+	<type>INT</type>
+	</MP_USJS_FOUND>
+	<MP_USJS_COMPLETED>
+	<id>MP{0}_USJS_COMPLETED</id>
+	<name>독특한 스턴트 점프 완료</name>
+	<type>INT</type>
+	</MP_USJS_COMPLETED>
+	<MP_NUMBER_NEAR_MISS>
+	<id>MP{0}_NUMBER_NEAR_MISS</id>
+	<name>아슬아슬 주행</name>
+	<type>INT</type>
+	</MP_NUMBER_NEAR_MISS>
+	<MP_CARS_COPS_EXPLODED>
+	<id>MP{0}_CARS_COPS_EXPLODED</id>
+	<name>폭발한 경찰차</name>
+	<type>INT</type>
+	</MP_CARS_COPS_EXPLODED>
+	<MP_CARS_EXPLODED>
+	<id>MP{0}_CARS_EXPLODED</id>
+	<name>폭발한 자동차</name>
+	<type>INT</type>
+	</MP_CARS_EXPLODED>
+	<MP_BIKES_EXPLODED>
+	<id>MP{0}_BIKES_EXPLODED</id>
+	<name>폭발한 오토바이</name>
+	<type>INT</type>
+	</MP_BIKES_EXPLODED>
+	<MP_HELIS_EXPLODED>
+	<id>MP{0}_HELIS_EXPLODED</id>
+	<name>폭발한 헬리콥터</name>
+	<type>INT</type>
+	</MP_HELIS_EXPLODED>
+	<MP_PLANES_EXPLODED>
+	<id>MP{0}_PLANES_EXPLODED</id>
+	<name>폭발한 비행기</name>
+	<type>INT</type>
+	</MP_PLANES_EXPLODED>
+	<MP_BOATS_EXPLODED>
+	<id>MP{0}_BOATS_EXPLODED</id>
+	<name>폭발한 보트</name>
+	<type>INT</type>
+	</MP_BOATS_EXPLODED>
+	<MP_QUADBIKE_EXPLODED>
+	<id>MP{0}_QUADBIKE_EXPLODED</id>
+	<name>폭발한 ATV</name>
+	<type>INT</type>
+	</MP_QUADBIKE_EXPLODED>
+	<MP_NO_CARS_REPAIR>
+	<id>MP{0}_NO_CARS_REPAIR</id>
+	<name>차량 수리 횟수</name>
+	<type>INT</type>
+	</MP_NO_CARS_REPAIR>
+	<MP_VEHICLES_SPRAYED>
+	<id>MP{0}_VEHICLES_SPRAYED</id>
+	<name>차량 도색 횟수</name>
+	<type>INT</type>
+	</MP_VEHICLES_SPRAYED>
+	<MP_VEHEXPORTED>
+	<id>MP{0}_VEHEXPORTED</id>
+	<name>수출한 자동차</name>
+	<type>INT</type>
+	</MP_VEHEXPORTED>
+	</Vehicles>
+	<Cash>
+	<header_name>현금</header_name>
+	<MP_MONEY_SPENT_WEAPON_ARMOR>
+	<id>MP{0}_MONEY_SPENT_WEAPON_ARMOR</id>
+	<name>무기 및 방탄복에 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_WEAPON_ARMOR>
+	<MP_MONEY_SPENT_VEH_MAINTENANCE>
+	<id>MP{0}_MONEY_SPENT_VEH_MAINTENANCE</id>
+	<name>차량 및 정비에 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_VEH_MAINTENANCE>
+	<MP_MONEY_SPENT_STYLE_ENT>
+	<id>MP{0}_MONEY_SPENT_STYLE_ENT</id>
+	<name>스타일 및 유흥비로 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_STYLE_ENT>
+	<MP_MONEY_SPENT_PROPERTY_UTIL>
+	<id>MP{0}_MONEY_SPENT_PROPERTY_UTIL</id>
+	<name>부동산 및 공과금에 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_PROPERTY_UTIL>
+	<MP_MONEY_SPENT_JOB_ACTIVITY>
+	<id>MP{0}_MONEY_SPENT_JOB_ACTIVITY</id>
+	<name>작업 및 보조 활동 참가 요금으로 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_JOB_ACTIVITY>
+	<MP_MONEY_SPENT_BETTING>
+	<id>MP{0}_MONEY_SPENT_BETTING</id>
+	<name>베팅에 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_BETTING>
+	<MP_MONEY_SPENT_CONTACT_SERVICE>
+	<id>MP{0}_MONEY_SPENT_CONTACT_SERVICE</id>
+	<name>연락책 서비스에 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_CONTACT_SERVICE>
+	<MP_MONEY_SPENT_HEALTHCARE>
+	<id>MP{0}_MONEY_SPENT_HEALTHCARE</id>
+	<name>치료비로 사용한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_HEALTHCARE>
+	<MP_MONEY_SPENT_DROPPED_STOLEN>
+	<id>MP{0}_MONEY_SPENT_DROPPED_STOLEN</id>
+	<name>떨어뜨리거나 도난당한 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_DROPPED_STOLEN>
+	<MP_MONEY_SPENT_SHARED>
+	<id>MP{0}_MONEY_SPENT_SHARED</id>
+	<name>타인에게 준 금액</name>
+	<type>Money</type>
+	</MP_MONEY_SPENT_SHARED>
+	<MP_MONEY_EARN_JOBS>
+	<id>MP{0}_MONEY_EARN_JOBS</id>
+	<name>작업으로 벌어들인 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_JOBS>
+	<MP_MONEY_EARN_SELLING_VEH>
+	<id>MP{0}_MONEY_EARN_SELLING_VEH</id>
+	<name>이동 수단을 팔아서 벌어들인 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_SELLING_VEH>
+	<MP_MONEY_EARN_BETTING>
+	<id>MP{0}_MONEY_EARN_BETTING</id>
+	<name>베팅으로 벌어들인 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_BETTING>
+	<MP_MONEY_EARN_GOOD_SPORT>
+	<id>MP{0}_MONEY_EARN_GOOD_SPORT</id>
+	<name>매너 플레이 보상으로 받은 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_GOOD_SPORT>
+	<MP_MONEY_EARN_PICKED_UP>
+	<id>MP{0}_MONEY_EARN_PICKED_UP</id>
+	<name>주운 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_PICKED_UP>
+	<MP_MONEY_EARN_SHARED>
+	<id>MP{0}_MONEY_EARN_SHARED</id>
+	<name>타인에게 받은 금액</name>
+	<type>Money</type>
+	</MP_MONEY_EARN_SHARED>
+	</Cash>
+	<Combat>
+	<header_name>전투</header_name>
+	<MP_SHOTS>
+	<id>MP{0}_SHOTS</id>
+	<name>발사</name>
+	<type>INT</type>
+	</MP_SHOTS>
+	<MP_HITS_PEDS_VEHICLES>
+	<id>MP{0}_HITS_PEDS_VEHICLES</id>
+	<name>명중</name>
+	<type>INT</type>
+	</MP_HITS_PEDS_VEHICLES>
+	<MP_WEAPON_ACCURACY>
+	<id>MP{0}_WEAPON_ACCURACY</id>
+	<name>명중률</name>
+	<type>Percentage</type>
+	</MP_WEAPON_ACCURACY>
+	<MP_KILLS>
+	<id>MP{0}_KILLS</id>
+	<name>사살</name>
+	<type>INT</type>
+	</MP_KILLS>
+	<MP_HEADSHOTS>
+	<id>MP{0}_HEADSHOTS</id>
+	<name>헤드샷으로 사살</name>
+	<type>INT</type>
+	</MP_HEADSHOTS>
+	<MP_KILLS_ARMED>
+	<id>MP{0}_KILLS_ARMED</id>
+	<name>무기로 사살</name>
+	<type>INT</type>
+	</MP_KILLS_ARMED>
+	<MP_KILLS_IN_FREE_AIM>
+	<id>MP{0}_KILLS_IN_FREE_AIM</id>
+	<name>자유 조준 사살</name>
+	<type>INT</type>
+	</MP_KILLS_IN_FREE_AIM>
+	<MP_KILLS_STEALTH>
+	<id>MP{0}_KILLS_STEALTH</id>
+	<name>은신 사살</name>
+	<type>INT</type>
+	</MP_KILLS_STEALTH>
+	<MP_SUCCESSFUL_COUNTERS>
+	<id>MP{0}_SUCCESSFUL_COUNTERS</id>
+	<name>반격</name>
+	<type>INT</type>
+	</MP_SUCCESSFUL_COUNTERS>
+	<MP_KILLS_PLAYERS>
+	<id>MP{0}_KILLS_PLAYERS</id>
+	<name>플레이어 사살 합계</name>
+	<type>INT</type>
+	</MP_KILLS_PLAYERS>
+	<MP_PLAYER_HEADSHOTS>
+	<id>MP{0}_PLAYER_HEADSHOTS</id>
+	<name>헤드샷으로 플레이어 사살 횟수</name>
+	<type>INT</type>
+	</MP_PLAYER_HEADSHOTS>
+	<MP_HORDKILLS>
+	<id>MP{0}_HORDKILLS</id>
+	<name>서바이벌 사살</name>
+	<type>INT</type>
+	</MP_HORDKILLS>
+	<MP_GHKILLS>
+	<id>MP{0}_GHKILLS</id>
+	<name>갱 어택 사살</name>
+	<type>INT</type>
+	</MP_GHKILLS>
+	<MP_DM_HIGHEST_KILLSTREAK>
+	<id>MP{0}_DM_HIGHEST_KILLSTREAK</id>
+	<name>데스매치에서 연속 사살 최고 기록</name>
+	<type>INT</type>
+	</MP_DM_HIGHEST_KILLSTREAK>
+	<MP_ARCHENEMY_KILLS>
+	<id>MP{0}_ARCHENEMY_KILLS</id>
+	<name>라이벌에게 사살당한 횟수</name>
+	<type>INT</type>
+	</MP_ARCHENEMY_KILLS>
+	<MP_BIGGEST_VICTIM_KILLS>
+	<id>MP{0}_BIGGEST_VICTIM_KILLS</id>
+	<name>피해자 사살</name>
+	<type>INT</type>
+	</MP_BIGGEST_VICTIM_KILLS>
+	</Combat>
+	<Weapons>
+	<header_name>무기</header_name>
+	<MP_PISTOL_KILLS>
+	<id>MP{0}_PISTOL_KILLS</id>
+	<name>피스톨로 사살</name>
+	<type>INT</type>
+	</MP_PISTOL_KILLS>
+	<MP_CMBTPISTOL_KILLS>
+	<id>MP{0}_CMBTPISTOL_KILLS</id>
+	<name>컴뱃 피스톨로 사살</name>
+	<type>INT</type>
+	</MP_CMBTPISTOL_KILLS>
+	<MP_APPISTOL_KILLS Comment="Conditional">
+	<id>MP{0}_APPISTOL_KILLS</id>
+	<name>AP 피스톨로 사살</name>
+	<type>INT</type>
+	</MP_APPISTOL_KILLS>
+	<MP_SNSPISTOL_KILLS Comment="Conditional" dlc="1">
+	<id>MP{0}_SNSPISTOL_KILLS</id>
+	<name>SNS 피스톨로 사살</name>
+	<type>INT</type>
+	</MP_SNSPISTOL_KILLS>
+	<MP_HVYPISTOL_KILLS Comment="Conditional" dlc="6">
+	<id>MP{0}_HVYPISTOL_KILLS</id>
+	<name>헤비 피스톨로 사살</name>
+	<type>INT</type>
+	</MP_HVYPISTOL_KILLS>
+	<MP_VPISTOL_KILLS Comment="Conditional" dlc="8">
+	<id>MP{0}_VPISTOL_KILLS</id>
+	<name>빈티지 피스톨로 사살</name>
+	<type>INT</type>
+	</MP_VPISTOL_KILLS>
+	<MP_MICROSMG_KILLS>
+	<id>MP{0}_MICROSMG_KILLS</id>
+	<name>마이크로 SMG로 사살</name>
+	<type>INT</type>
+	</MP_MICROSMG_KILLS>
+	<MP_SMG_KILLS>
+	<id>MP{0}_SMG_KILLS</id>
+	<name>SMG로 사살</name>
+	<type>INT</type>
+	</MP_SMG_KILLS>
+	<MP_ASLTSMG_KILLS>
+	<id>MP{0}_ASLTSMG_KILLS</id>
+	<name>어썰트 SMG로 사살</name>
+	<type>INT</type>
+	</MP_ASLTSMG_KILLS>
+	<MP_GUSNBRG_KILLS Comment="Conditional" dlc="5">
+	<id>MP{0}_GUSNBRG_KILLS</id>
+	<name>구젠버그 스위퍼로 사살</name>
+	<type>INT</type>
+	</MP_GUSNBRG_KILLS>
+	<MP_ASLTRIFLE_KILLS>
+	<id>MP{0}_ASLTRIFLE_KILLS</id>
+	<name>어썰트 라이플로 사살</name>
+	<type>INT</type>
+	</MP_ASLTRIFLE_KILLS>
+	<MP_CRBNRIFLE_KILLS>
+	<id>MP{0}_CRBNRIFLE_KILLS</id>
+	<name>카빈소총으로 사살</name>
+	<type>INT</type>
+	</MP_CRBNRIFLE_KILLS>
+	<MP_ADVRIFLE_KILLS>
+	<id>MP{0}_ADVRIFLE_KILLS</id>
+	<name>차세대 라이플로 사살</name>
+	<type>INT</type>
+	</MP_ADVRIFLE_KILLS>
+	<MP_BULLRIFLE_KILLS Comment="Conditional" dlc="7">
+	<id>MP{0}_BULLRIFLE_KILLS</id>
+	<name>불펍 라이플로 사살</name>
+	<type>INT</type>
+	</MP_BULLRIFLE_KILLS>
+	<MP_SPCARBINE_KILLS Comment="Conditional" dlc="6">
+	<id>MP{0}_SPCARBINE_KILLS</id>
+	<name>특별 카빈소총으로 사살</name>
+	<type>INT</type>
+	</MP_SPCARBINE_KILLS>
+	<MP_MUSKET_KILLS Comment="Conditional" dlc="9">
+	<id>MP{0}_MUSKET_KILLS</id>
+	<name>머스킷으로 사살</name>
+	<type>INT</type>
+	</MP_MUSKET_KILLS>
+	<MP_MKRIFLE_KILLS Comment="Conditional" dlc="11">
+	<id>MP{0}_MKRIFLE_KILLS</id>
+	<name>마크스맨 라이플로 사살</name>
+	<type>INT</type>
+	</MP_MKRIFLE_KILLS>
+	<MP_MG_KILLS>
+	<id>MP{0}_MG_KILLS</id>
+	<name>MG로 사살</name>
+	<type>INT</type>
+	</MP_MG_KILLS>
+	<MP_CMBTMG_KILLS>
+	<id>MP{0}_CMBTMG_KILLS</id>
+	<name>컴뱃 MG로 사살</name>
+	<type>INT</type>
+	</MP_CMBTMG_KILLS>
+	<MP_PUMP_KILLS>
+	<id>MP{0}_PUMP_KILLS</id>
+	<name>펌프 샷건으로 사살</name>
+	<type>INT</type>
+	</MP_PUMP_KILLS>
+	<MP_SAWNOFF_KILLS Comment="Conditional">
+	<id>MP{0}_SAWNOFF_KILLS</id>
+	<name>소드오프 샷건으로 사살</name>
+	<type>INT</type>
+	</MP_SAWNOFF_KILLS>
+	<MP_ASLTSHTGN_KILLS>
+	<id>MP{0}_ASLTSHTGN_KILLS</id>
+	<name>어썰트 샷건으로 사살</name>
+	<type>INT</type>
+	</MP_ASLTSHTGN_KILLS>
+	<MP_BULLPUP_KILLS>
+	<id>MP{0}_BULLPUP_KILLS</id>
+	<name>불펍 샷건 사살</name>
+	<type>INT</type>
+	</MP_BULLPUP_KILLS>
+	<MP_HVYSHGN_KILLS Comment="Conditional" dlc="11">
+	<id>MP{0}_HVYSHGN_KILLS</id>
+	<name>헤비 샷건으로 사살</name>
+	<type>INT</type>
+	</MP_HVYSHGN_KILLS>
+	<MP_SNIPERRFL_KILLS>
+	<id>MP{0}_SNIPERRFL_KILLS</id>
+	<name>스나이퍼 라이플로 사살</name>
+	<type>INT</type>
+	</MP_SNIPERRFL_KILLS>
+	<MP_HVYSNIPER_KILLS>
+	<id>MP{0}_HVYSNIPER_KILLS</id>
+	<name>헤비 스나이퍼 라이플로 사살</name>
+	<type>INT</type>
+	</MP_HVYSNIPER_KILLS>
+	<MP_GRNLAUNCH_KILLS>
+	<id>MP{0}_GRNLAUNCH_KILLS</id>
+	<name>그레네이드 런처로 사살</name>
+	<type>INT</type>
+	</MP_GRNLAUNCH_KILLS>
+	<MP_RPG_KILLS>
+	<id>MP{0}_RPG_KILLS</id>
+	<name>RPG로 사살</name>
+	<type>INT</type>
+	</MP_RPG_KILLS>
+	<MP_FIREWRK_KILLS Comment="Conditional" dlc="9">
+	<id>MP{0}_FIREWRK_KILLS</id>
+	<name>폭죽 발사기로 사살</name>
+	<type>INT</type>
+	</MP_FIREWRK_KILLS>
+	<MP_MINIGUNS_KILLS>
+	<id>MP{0}_MINIGUNS_KILLS</id>
+	<name>미니건으로 사살</name>
+	<type>INT</type>
+	</MP_MINIGUNS_KILLS>
+	<MP_GRENADE_KILLS>
+	<id>MP{0}_GRENADE_KILLS</id>
+	<name>수류탄으로 사살</name>
+	<type>INT</type>
+	</MP_GRENADE_KILLS>
+	<MP_SMKGRENADE_KILLS>
+	<id>MP{0}_SMKGRENADE_KILLS</id>
+	<name>최루가스로 사살</name>
+	<type>INT</type>
+	</MP_SMKGRENADE_KILLS>
+	<MP_STKYBMB_KILLS>
+	<id>MP{0}_STKYBMB_KILLS</id>
+	<name>점착 폭탄으로 사살</name>
+	<type>INT</type>
+	</MP_STKYBMB_KILLS>
+	<MP_MOLOTOV_KILLS>
+	<id>MP{0}_MOLOTOV_KILLS</id>
+	<name>화염병으로 사살</name>
+	<type>INT</type>
+	</MP_MOLOTOV_KILLS>
+	<MP_KNIFE_KILLS>
+	<id>MP{0}_KNIFE_KILLS</id>
+	<name>나이프로 사살</name>
+	<type>INT</type>
+	</MP_KNIFE_KILLS>
+	<MP_NIGHTSTICK_KILLS>
+	<id>MP{0}_NIGHTSTICK_KILLS</id>
+	<name>야경봉으로 사살</name>
+	<type>INT</type>
+	</MP_NIGHTSTICK_KILLS>
+	<MP_CROWBAR_KILLS>
+	<id>MP{0}_CROWBAR_KILLS</id>
+	<name>쇠지렛대로 사살</name>
+	<type>INT</type>
+	</MP_CROWBAR_KILLS>
+	<MP_BAT_KILLS>
+	<id>MP{0}_BAT_KILLS</id>
+	<name>야구방망이로 사살</name>
+	<type>INT</type>
+	</MP_BAT_KILLS>
+	<MP_GCLUB_KILLS>
+	<id>MP{0}_GCLUB_KILLS</id>
+	<name>골프채로 사살</name>
+	<type>INT</type>
+	</MP_GCLUB_KILLS>
+	<MP_HAMMER_KILLS Comment="Conditional" dlc="12">
+	<id>MP{0}_HAMMER_KILLS</id>
+	<name>망치로 사살</name>
+	<type>INT</type>
+	</MP_HAMMER_KILLS>
+	<MP_UNARMED_KILLS>
+	<id>MP{0}_UNARMED_KILLS</id>
+	<name>비무장 사살</name>
+	<type>INT</type>
+	</MP_UNARMED_KILLS>
+	<MP_FLAREGUN_KILLS Comment="Conditional" dlc="14">
+	<id>MP{0}_FLAREGUN_KILLS</id>
+	<name>신호탄 총으로 사살</name>
+	<type>INT</type>
+	</MP_FLAREGUN_KILLS>
+	<MP_BOTTLE_KILLS Comment="Conditional" dlc="1">
+	<id>MP{0}_BOTTLE_KILLS</id>
+	<name>병으로 사살</name>
+	<type>INT</type>
+	</MP_BOTTLE_KILLS>
+	<MP_DAGGER_KILLS Comment="Conditional" dlc="8">
+	<id>MP{0}_DAGGER_KILLS</id>
+	<name>고전적 기사 단검으로 사살</name>
+	<type>INT</type>
+	</MP_DAGGER_KILLS>
+	<MP_HATCHET_KILLS Comment="Conditional" dlc="13">
+	<id>MP{0}_HATCHET_KILLS</id>
+	<name>손도끼로 사살</name>
+	<type>INT</type>
+	</MP_HATCHET_KILLS>
+	<MP_RHINO_ROCKET_KILLS>
+	<id>MP{0}_RHINO_ROCKET_KILLS</id>
+	<name>라이노 건으로 사살</name>
+	<type>INT</type>
+	</MP_RHINO_ROCKET_KILLS>
+	<MP_BUZZARD_BULLET_KILLS>
+	<id>MP{0}_BUZZARD_BULLET_KILLS</id>
+	<name>버자드 미니건으로 사살</name>
+	<type>INT</type>
+	</MP_BUZZARD_BULLET_KILLS>
+	<MP_BUZZARD_ROCKET_KILLS>
+	<id>MP{0}_BUZZARD_ROCKET_KILLS</id>
+	<name>버자드 로켓으로 사살</name>
+	<type>INT</type>
+	</MP_BUZZARD_ROCKET_KILLS>
+	<MP_LAZER_ROCKET_KILLS>
+	<id>MP{0}_LAZER_ROCKET_KILLS</id>
+	<name>레이저 미사일로 사살</name>
+	<type>INT</type>
+	</MP_LAZER_ROCKET_KILLS>
+	<MP_ANNIHL_BULLET_KILLS>
+	<id>MP{0}_ANNIHL_BULLET_KILLS</id>
+	<name>어나이얼레이터 미니건으로 사살</name>
+	<type>INT</type>
+	</MP_ANNIHL_BULLET_KILLS>
+	</Weapons>
+	</global>
