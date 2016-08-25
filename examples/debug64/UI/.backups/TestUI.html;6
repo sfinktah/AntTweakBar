@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for Cygwin (vers 25 March 2009), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="refresh" content="5; url=https://www.google.com.au/">
+  <style>
+  body, html {
+      background-color: rgba(20, 20, 20, 0);
+  }
+  .Absolute-Center {
+      display: table;
+      height: auto;
+      width: 100%;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      text-align: center;
+      font-family: Impact;
+      font-size: 96pt;
+      color: #ddd;
+  }
+  </style>
+
+  <title>TestUI</title>
+</head>
+
+<body>
+<div class="Absolute-Center">TestUI</div>
+</body>
+</html>
