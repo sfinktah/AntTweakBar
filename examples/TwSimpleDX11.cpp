@@ -694,16 +694,19 @@ LRESULT CALLBACK MessageProc(HWND wnd, UINT message, WPARAM wParam, LPARAM lPara
 
                 // TwWindowSize has been called by TwEventWin, so it is not necessary to call it again here.
             }
+            CPluginHTML5::OsrWndProc(wnd, message, wParam, lParam);
             return 0;
         case WM_CHAR:
             if (wParam == VK_ESCAPE)
                 PostQuitMessage(0);
+			CPluginHTML5::OsrWndProc(wnd, message, wParam, lParam);
             return 0;
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
         default:
-            return DefWindowProc(wnd, message, wParam, lParam);
+            return CPluginHTML5::OsrWndProc(wnd, message, wParam, lParam);
+			//DefWindowProc(wnd, message, wParam, lParam);
     }
 }
 

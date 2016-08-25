@@ -16,6 +16,8 @@
     <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\CPluginHTML5.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Libraries\CryCEF\CEF\cefclient\browser\util_win.cc" />
+    <ClCompile Include="..\..\..\..\..\..\OneDrive\Documents\Visual Studio 2015\Libraries\CryCEF\CEF\cefclient\browser\geometry_util.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sfinktah\sigslot.h" />

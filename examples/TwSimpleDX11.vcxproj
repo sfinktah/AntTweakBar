@@ -145,6 +145,7 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4100;4189;4005;4244;4505;4324;4101</DisableSpecificWarnings>
       <OmitFramePointers>false</OmitFramePointers>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -159,6 +160,9 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
       <AdditionalOptions>
       </AdditionalOptions>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEvent>
@@ -251,6 +255,8 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\CEF\cefclient\browser\geometry_util.cc" />
+    <ClCompile Include="..\..\CEF\cefclient\browser\util_win.cc" />
     <ClCompile Include="..\..\Plugin_D3D\src\CPluginD3D.cpp" />
     <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
     <ClCompile Include="CryMemoryMagic.cpp" />
