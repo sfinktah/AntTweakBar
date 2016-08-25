@@ -135,7 +135,7 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(VisualStudioDir)\..\Libraries\DirectXSDK\Include;$(VisualStudioDir)\..\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\..\Libraries\cef-binary;$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=1;_ITERATOR_DEBUG_LEVEL=2;_SECURE_SCL=1;FORCE_STANDARD_ASSERT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -150,7 +150,7 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(ConfigurationName);$(ProjectDir)\..\..\CEF\$(ConfigurationName);$(ProjectDir)\..\External-Libs\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -218,7 +218,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(VisualStudioDir)\..\Libraries\DirectXSDK\Include;$(VisualStudioDir)\..\Libraries\boost-1.61-vc140-x64-12.03.2016;$(VisualStudioDir)\..\Libraries\cef-binary;$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -237,7 +237,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(ConfigurationName);$(ProjectDir)\..\..\CEF\$(ConfigurationName);$(ProjectDir)\..\External-Libs\DirectXSDK\Lib\$(PlatformTargetAsMSBuildArchitecture);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
