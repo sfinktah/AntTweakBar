@@ -22,7 +22,6 @@
 //
 //  ---------------------------------------------------------------------------
 
-// #include "TwSimpleDX11.h"
 #include <AntTweakBar.h>
 #include <cmath>
 #include <vector>
