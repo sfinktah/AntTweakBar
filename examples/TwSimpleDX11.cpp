@@ -630,6 +630,16 @@ void Cleanup()
 // Called every time the application receives a message
 LRESULT CALLBACK MessageProc(HWND wnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
+	switch (message) {
+	case WM_SYSCHAR:
+	case WM_SYSKEYDOWN:
+	case WM_SYSKEYUP:
+	case WM_KEYDOWN:
+	case WM_KEYUP:
+	case WM_CHAR:
+		// TwEventWin eats some of our keys, so we can't let it have first go at this one.
+		CPluginHTML5::OsrWndProc(wnd, message, wParam, lParam);
+	}
     // Send event message to AntTweakBar
     if (TwEventWin(wnd, message, wParam, lParam))
         return 0; // Event has been handled by AntTweakBar
