@@ -16,6 +16,7 @@
 *.vcproj
 *~
 .backups
+examples/bin64
 /examples/.backups
 /examples/bin32
 /examples/bin32/*.exe
