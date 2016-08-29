@@ -20,8 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6D417E54-50AC-40D3-913A-35CD73F93D51}</ProjectGuid>
-    <RootNamespace>TwSimpleDX11</RootNamespace>
+    <RootNamespace>Tearless</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <ProjectName>Tearless</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -36,13 +38,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -81,6 +83,7 @@
     <IntDir>tmp\debug64\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>bin32\</OutDir>
@@ -93,16 +96,14 @@
     <IntDir>tmp\bin64\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
-      <Command>fxc /Od /Zi /T vs_4_0_level_9_1 /E MainVS /Fh $(IntDir)TwSimpleDX11_VS.h TwSimpleDX11.hlsl
-fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hlsl
-</Command>
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -114,7 +115,7 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>../lib/debug;../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib\debug;..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -126,16 +127,13 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <PreBuildEvent>
-      <Command>fxc /Od /Zi /T vs_4_0_level_9_1 /E MainVS /Fh $(IntDir)TwSimpleDX11_VS.h TwSimpleDX11.hlsl
-fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hlsl
-</Command>
     </PreBuildEvent>
     <Midl>
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)..\YUCK\..\..\CryHTML5\cef\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=1;_ITERATOR_DEBUG_LEVEL=2;_SECURE_SCL=1;FORCE_STANDARD_ASSERT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -146,11 +144,12 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
       <DisableSpecificWarnings>4100;4189;4005;4244;4505;4324;4101</DisableSpecificWarnings>
       <OmitFramePointers>false</OmitFramePointers>
       <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>Async</ExceptionHandling>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -166,9 +165,6 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpl
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <PreBuildEvent>
-      <Command>fxc /T vs_4_0_level_9_1 /E MainVS /Fh $(IntDir)TwSimpleDX11_VS.h TwSimpleDX11.hlsl
-fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hlsl
-</Command>
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Full</Optimization>
@@ -176,7 +172,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>../include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -191,7 +187,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -205,9 +201,6 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PreBuildEvent>
-      <Command>fxc /T vs_4_0_level_9_1 /E MainVS /Fh $(IntDir)TwSimpleDX11_VS.h TwSimpleDX11.hlsl
-fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hlsl
-</Command>
     </PreBuildEvent>
     <Midl>
       <TargetEnvironment>X64</TargetEnvironment>
@@ -218,13 +211,13 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)../YUCK/../../CryHTML5/cef/include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)..\YUCK\..\..\CryHTML5\cef\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
-      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExceptionHandling>Async</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat />
       <CompileAs>CompileAsCpp</CompileAs>
@@ -237,7 +230,7 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -267,31 +260,21 @@ fxc /T ps_4_0_level_9_1 /E MainPS /Fh $(IntDir)TwSimpleDX11_PS.h TwSimpleDX11.hl
     <ClCompile Include="TwSimpleDX11.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="TwSimpleDX11.hlsl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="../../Plugin_D3D/src/hooktools.h" />
-    <ClInclude Include="../../CryHTML5/src/CEFRenderHandler.hpp" />
-    <ClInclude Include="../../CryHTML5/src/CPluginHTML5.h" />
-    <ClInclude Include="../../CryHTML5/src/FullscreenTriangleDrawer.h" />
+    <ClInclude Include="..\..\Plugin_D3D\src\hooktools.h" />
+    <ClInclude Include="..\..\CryHTML5\src\CEFRenderHandler.hpp" />
+    <ClInclude Include="..\..\CryHTML5\src\CPluginHTML5.h" />
+    <ClInclude Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.h" />
     <ClInclude Include="FakePluginManager.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicon.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicontest.h" />
-    <ClInclude Include="../../Plugin_D3D/inc/IPluginD3D.h" />
-    <ClInclude Include="../../CryHTML5/inc/IPluginHTML5.h" />
+    <ClInclude Include="..\..\Plugin_D3D\inc\IPluginD3D.h" />
+    <ClInclude Include="..\..\CryHTML5\inc\IPluginHTML5.h" />
     <ClInclude Include="sfinktah\sigslot.h" />
     <ClInclude Include="StaticTest.h" />
     <ClInclude Include="TwSimpleDX11.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
+
