@@ -36,7 +36,11 @@
 	// #include "sfinktah/CPluginHTML5.h"
 	// #include <IPluginManager.h>
 	// #define XXX_DEBUG
+#ifndef ENABLE_TEARLESS
+#define XXX_DEBUG
+#endif
 #ifndef XXX_DEBUG
+
 // #include <platform_impl.h>
 #include <CPluginD3D.h>
 #include "FullscreenTriangleDrawer.h"
@@ -75,6 +79,7 @@ void D11DeviceContext(ID3D11DeviceContext * v) { g_D3DDevCtx = v; }            /
 // IDXGISwapChain* g_SwapCh;
 IDXGISwapChain* D11SwapChain() { return g_SwapChain; }  // Getter
 void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Sette
+#ifndef XXX_DEBUG
 
 void* TearlessInit() {
 	SfinktahsConsole();
@@ -82,6 +87,7 @@ void* TearlessInit() {
 	gChromePlugin->InitDependencies();  // Calls InitD3DPlugin, and InitCEF (which calls InitCEFBrowser)
 	return gChromePlugin;
 }
+#endif
 #ifdef TWSIMPLE
 
 // Geometry data structures and objects
