@@ -28,6 +28,7 @@
 // #include <cassert>
 
 // #include "d3d10vs2003.h" // workaround to include D3D10.h and D3D11.h with VS2003
+#include "../../../../dll/src/AuthorityProjectConfig.h"
 #include <d3d11.h>
 
 #include "TwSimpleDX11.h"
