@@ -219,7 +219,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat />
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>CompileAsCpp</CompileAs>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
@@ -249,9 +249,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\CEF\cefclient\browser\geometry_util.cc" />
+    <ClCompile Include="..\..\CEF\cefclient\browser\osr_renderer.cc" />
     <ClCompile Include="..\..\CEF\cefclient\browser\util_win.cc" />
+    <ClCompile Include="..\..\CryHTML5\src\OsrWndProc.cpp" />
     <ClCompile Include="..\..\Plugin_D3D\src\CPluginD3D.cpp" />
     <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
+    <ClCompile Include="binding.cpp" />
     <ClCompile Include="CryMemoryMagic.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\CPluginHTML5.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
@@ -260,10 +263,13 @@
     <ClCompile Include="TwSimpleDX11.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\CryHTML5\src\CEFHandler.hpp" />
+    <ClInclude Include="..\..\CryHTML5\src\OsrWndProc.h" />
     <ClInclude Include="..\..\Plugin_D3D\src\hooktools.h" />
     <ClInclude Include="..\..\CryHTML5\src\CEFRenderHandler.hpp" />
     <ClInclude Include="..\..\CryHTML5\src\CPluginHTML5.h" />
     <ClInclude Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.h" />
+    <ClInclude Include="binding.h" />
     <ClInclude Include="FakePluginManager.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicon.h" />
     <ClInclude Include="sfinktah\GuiConsole\guicontest.h" />
@@ -277,4 +283,3 @@
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
-
