@@ -38,7 +38,7 @@
     <ClInclude Include="..\..\CryHTML5\inc\IPluginHTML5.h" />
     <ClInclude Include="binding.h" />
     <ClInclude Include="..\..\CryHTML5\src\CEFHandler.hpp" />
-    <ClInclude Include="..\..\CryHTML5\src\OsrWndProc.h" />
+    <ClInclude Include="..\..\CryHTML5\src\CEFQueryUrl.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GuiConsole">

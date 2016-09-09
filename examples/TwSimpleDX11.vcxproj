@@ -206,12 +206,12 @@
       <TargetEnvironment>X64</TargetEnvironment>
     </Midl>
     <ClCompile>
-      <Optimization>Full</Optimization>
+      <Optimization>MinSpace</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
-      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)..\YUCK\..\..\CryHTML5\cef\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(SolutionDir)\dll\src;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(SolutionDir)\dll\src;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -219,12 +219,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level4</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
       <CompileAs>CompileAsCpp</CompileAs>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
       <DisableSpecificWarnings>4100;4189;4005;4244;4505;4324;4101</DisableSpecificWarnings>
+      <AdditionalOptions>/P %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -264,7 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\CryHTML5\src\CEFHandler.hpp" />
-    <ClInclude Include="..\..\CryHTML5\src\OsrWndProc.h" />
+    <ClInclude Include="..\..\CryHTML5\src\CEFQueryUrl.h" />
     <ClInclude Include="..\..\Plugin_D3D\src\hooktools.h" />
     <ClInclude Include="..\..\CryHTML5\src\CEFRenderHandler.hpp" />
     <ClInclude Include="..\..\CryHTML5\src\CPluginHTML5.h" />
