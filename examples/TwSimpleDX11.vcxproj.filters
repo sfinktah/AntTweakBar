@@ -18,6 +18,7 @@
     <ClCompile Include="binding.cpp" />
     <ClCompile Include="..\..\CEF\cefclient\browser\osr_renderer.cc" />
     <ClCompile Include="..\..\CryHTML5\src\OsrWndProc.cpp" />
+    <ClCompile Include="Tearless.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sfinktah\sigslot.h" />
@@ -45,5 +46,8 @@
     <Filter Include="GuiConsole">
       <UniqueIdentifier>{fe585131-e634-440e-93b9-b900bd5dc9ab}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

@@ -92,8 +92,8 @@
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>bin64\</OutDir>
-    <IntDir>tmp\bin64\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Temp\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetExt>.lib</TargetExt>
@@ -260,6 +260,7 @@
     <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicon.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicontest.cpp" />
+    <ClCompile Include="Tearless.cpp" />
     <ClCompile Include="TwSimpleDX11.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +280,9 @@
     <ClInclude Include="StaticTest.h" />
     <ClInclude Include="Tearless.h" />
     <ClInclude Include="TwSimpleDX11.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

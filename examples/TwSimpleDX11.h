@@ -1,5 +1,7 @@
 #pragma once
 #include <d3d11.h>
+#include "../../AuthorityProjectConfig.h"
+#include "../../XyzSample/XyzLibrary/TearlessLibrary.h"
 
 extern ID3D11Device *          g_D3DDev;
 extern ID3D11DeviceContext *   g_D3DDevCtx;
@@ -15,7 +17,11 @@ void D11DeviceContext(ID3D11DeviceContext* v);
 IDXGISwapChain* D11SwapChain();  
 void D11SwapChain(IDXGISwapChain* v);
 
-void * TearlessInit();
+#ifdef ENABLE_TEARLESS
+extern ISimplePluginHTML5 * TearlessInit(bool debugConsole = true);
+#else
+#error("ENABLE_TEARLESS IS NOT SET")
+#endif
 
 
 

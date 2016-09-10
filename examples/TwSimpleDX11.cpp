@@ -1,21 +1,8 @@
-// #include <AntTweakBar.h>
-// #include <cmath>
-// #include <vector>
-// #include <cassert>
-// #include "d3d10vs2003.h" // workaround to include D3D10.h and D3D11.h with VS2003
-#include "../../AuthorityProjectConfig.h"
-#include <d3d11.h>
+// #include "../../AuthorityProjectConfig.h"
 
 #include "TwSimpleDX11.h"
 
-
-// #include "sfinktah/CPluginHTML5.h"
-// #include <IPluginManager.h>
-// #define XXX_DEBUG
-#ifndef ENABLE_TEARLESS
-#define XXX_DEBUG
-#endif
-#ifndef XXX_DEBUG
+#ifdef ENABLE_TEARLESS
 
 // #include <platform_impl.h>
 #include <CPluginD3D.h>
@@ -59,18 +46,25 @@ IDXGISwapChain* D11SwapChain() { return g_SwapChain; }  // Getter
 /// (Unused) Set DirectX11 DeviceContext
 /// </summary>
 void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Sette
-#ifndef XXX_DEBUG
+#ifdef ENABLE_TEARLESS
 
 /// <summary>
-/// Inject Tearless
+/// Inject Tearless with Console
 /// </summary>
 /// <returns>Tearless Controller</returns>
-void* TearlessInit(bool debugConsole = true) {
+/*struct ISimplePluginHTML5 * __cdecl TearlessInit(void)*/
+/// <summary>
+/// Inject Tearless (optional console)
+/// </summary>
+/// <returns>Tearless Controller</returns>
+ISimplePluginHTML5* TearlessInit(bool debugConsole) {
 	if (debugConsole)
 		SfinktahsConsole();
 	gChromePlugin = new CPluginHTML5;
 	gChromePlugin->InitDependencies();  // Calls InitD3DPlugin, and InitCEF (which calls InitCEFBrowser)
-	return gChromePlugin;
+	return dynamic_cast<ISimplePluginHTML5 *>(gChromePlugin);
 }
 
+#else
+#error("ENABLE_TEARLESS IS NOT SET")
 #endif
