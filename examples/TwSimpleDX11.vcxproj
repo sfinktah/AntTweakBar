@@ -79,8 +79,8 @@
     <GenerateManifest>false</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>debug64\</OutDir>
-    <IntDir>tmp\debug64\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Temp-Tearless\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetExt>.lib</TargetExt>
@@ -93,7 +93,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build\Temp\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Build\Temp-Tearless\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <TargetExt>.lib</TargetExt>
@@ -134,7 +134,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)..\YUCK\..\..\CryHTML5\cef\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=1;_ITERATOR_DEBUG_LEVEL=2;_SECURE_SCL=1;FORCE_STANDARD_ASSERT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=1;_ITERATOR_DEBUG_LEVEL=2;_SECURE_SCL=1;FORCE_STANDARD_ASSERT;TEARLESS_LIBRARY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -148,7 +148,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -212,7 +212,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <AdditionalIncludeDirectories>.;..\include;sfinktah;$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);$(ProjectDir)\..\..\CEF;$(ProjectDir)\..\..\CEF\include;$(ProjectDir)\..\..\CryHTML5\inc;$(ProjectDir)\..\..\CryHTML5\src;$(ProjectDir)\..\..\Plugin_D3D\inc;$(ProjectDir)\..\..\Plugin_D3D\src;$(ProjectDir)\..\..\Plugin_SDK\inc;$(ProjectDir)\..\..\Plugin_SDK\src;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryCommon;$(ProjectDir)\..\..\bare-minimum-cryengine3\code\CryGame;$(SolutionDir)\dll\src;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;TEARLESS_LIBRARY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <ExceptionHandling>Async</ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -228,7 +228,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>$(ProjectDir)\..\..\CEF\build\libcef_dll_wrapper\$(Configuration);$(ProjectDir)\..\..\CEF\build\cefclient\$(Configuration);$(ProjectDir)\..\..\CEF\$(Configuration);..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -249,7 +249,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\CEF\cefclient\browser\geometry_util.cc" />
-    <ClCompile Include="..\..\CEF\cefclient\browser\osr_renderer.cc" />
     <ClCompile Include="..\..\CEF\cefclient\browser\util_win.cc" />
     <ClCompile Include="..\..\CryHTML5\src\OsrWndProc.cpp" />
     <ClCompile Include="..\..\Plugin_D3D\src\CPluginD3D.cpp" />
@@ -260,7 +259,9 @@
     <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicon.cpp" />
     <ClCompile Include="sfinktah\GuiConsole\guicontest.cpp" />
-    <ClCompile Include="Tearless.cpp" />
+    <ClCompile Include="TearlessLibrary.cpp" />
+    <ClCompile Include="TearlessLibraryDllMain.cpp" />
+    <ClCompile Include="TearlessLibraryStdAfx.cpp" />
     <ClCompile Include="TwSimpleDX11.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -278,7 +279,8 @@
     <ClInclude Include="..\..\CryHTML5\inc\IPluginHTML5.h" />
     <ClInclude Include="sfinktah\sigslot.h" />
     <ClInclude Include="StaticTest.h" />
-    <ClInclude Include="Tearless.h" />
+    <ClInclude Include="TearlessLibrary.h" />
+    <ClInclude Include="TearlessLibraryStdAfx.h" />
     <ClInclude Include="TwSimpleDX11.h" />
   </ItemGroup>
   <ItemGroup>

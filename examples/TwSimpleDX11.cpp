@@ -45,7 +45,7 @@ IDXGISwapChain* D11SwapChain() { return g_SwapChain; }  // Getter
 /// <summary>
 /// (Unused) Set DirectX11 DeviceContext
 /// </summary>
-void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Sette
+void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Setter
 #ifdef ENABLE_TEARLESS
 
 /// <summary>

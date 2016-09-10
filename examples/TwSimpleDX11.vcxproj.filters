@@ -16,9 +16,10 @@
     <ClCompile Include="..\..\CEF\cefclient\browser\geometry_util.cc" />
     <ClCompile Include="..\..\CEF\cefclient\browser\util_win.cc" />
     <ClCompile Include="binding.cpp" />
-    <ClCompile Include="..\..\CEF\cefclient\browser\osr_renderer.cc" />
     <ClCompile Include="..\..\CryHTML5\src\OsrWndProc.cpp" />
-    <ClCompile Include="Tearless.cpp" />
+    <ClCompile Include="TearlessLibrary.cpp" />
+    <ClCompile Include="TearlessLibraryDllMain.cpp" />
+    <ClCompile Include="TearlessLibraryStdAfx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sfinktah\sigslot.h" />
@@ -40,7 +41,8 @@
     <ClInclude Include="binding.h" />
     <ClInclude Include="..\..\CryHTML5\src\CEFHandler.hpp" />
     <ClInclude Include="..\..\CryHTML5\src\CEFQueryUrl.h" />
-    <ClInclude Include="Tearless.h" />
+    <ClInclude Include="TearlessLibrary.h" />
+    <ClInclude Include="TearlessLibraryStdAfx.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GuiConsole">
