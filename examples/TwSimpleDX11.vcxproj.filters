@@ -39,6 +39,7 @@
     <ClInclude Include="binding.h" />
     <ClInclude Include="..\..\CryHTML5\src\CEFHandler.hpp" />
     <ClInclude Include="..\..\CryHTML5\src\CEFQueryUrl.h" />
+    <ClInclude Include="Tearless.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GuiConsole">

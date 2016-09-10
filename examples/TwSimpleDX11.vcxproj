@@ -225,7 +225,6 @@
       </UndefinePreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
       <DisableSpecificWarnings>4100;4189;4005;4244;4505;4324;4101</DisableSpecificWarnings>
-      <AdditionalOptions>/P %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -278,6 +277,7 @@
     <ClInclude Include="..\..\CryHTML5\inc\IPluginHTML5.h" />
     <ClInclude Include="sfinktah\sigslot.h" />
     <ClInclude Include="StaticTest.h" />
+    <ClInclude Include="Tearless.h" />
     <ClInclude Include="TwSimpleDX11.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
