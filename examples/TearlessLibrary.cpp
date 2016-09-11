@@ -2,7 +2,6 @@
 //
 
 #include "TearlessLibraryStdAfx.h"
-//#define TEARLESS_LIBRARY_EXPORTS
 
 #include "TearlessLibrary.h"
 #include "../../CryHTML5/src/CPluginHTML5.h"
@@ -35,7 +34,7 @@ public:
 	Tearless_impl() {};
 	bool Show();
 	bool SetURL(const wchar_t* sURL);
-	bool ExecuteJS(const wchar_t* sJS);
+	bool ExecuteJS(const char* sJS);
 
 	/// <summary>
 	/// Get DirectX11 Device
@@ -78,7 +77,10 @@ private:
 
 bool Tearless_impl::Show() {
 	// plugin = TearlessInit();
-	plugin = dynamic_cast<HTML5Plugin::CPluginHTML5*>(TearlessInit());
+	//plugin = dynamic_cast<HTML5Plugin::CPluginHTML5*>(TearlessInit());
+	plugin = TearlessInit();
+	printf("Tearless_impl: plugin: %p", plugin);
+	printf("Tearless_impl: gChromePlugin: %p", gChromePlugin);
 	return true;
 }
 /**
@@ -87,6 +89,8 @@ bool Tearless_impl::Show() {
 * @return true if successful
 */
 bool Tearless_impl::SetURL(const wchar_t* sURL) {
+	printf("Tearless_impl: plugin: %p", plugin);
+	printf("Tearless_impl: gChromePlugin: %p", gChromePlugin);
 	return plugin->SetURL(sURL);
 }
 
@@ -95,8 +99,17 @@ bool Tearless_impl::SetURL(const wchar_t* sURL) {
 * @param sJS the java script code
 * @return true if successful
 */
-bool Tearless_impl::ExecuteJS(const wchar_t* sJS) {
-	return plugin->ExecuteJS(sJS);
+bool Tearless_impl::ExecuteJS(const char* sJS) {
+	printf("Tearless_impl: plugin: %p", plugin);
+	printf("Tearless_impl: gChromePlugin: %p", gChromePlugin);
+	printf("Executing javascript: %s\n", sJS);
+	std::string s(sJS);
+	std::wstring ws;
+	int len = s.length();
+	for (int i = 0; i < len; i++) {
+		ws.append(1, s[i]);
+	}
+	return plugin->ExecuteJS(ws.c_str());
 }
 
 
@@ -119,7 +132,12 @@ bool Tearless_impl::ExecuteJS(const wchar_t* sJS) {
 #pragma comment(linker, "/export:GetTearless=_GetTearless@0")
 #endif  // _WIN64
 
-TEARLESS_API TEARLESS_HANDLE WINAPI GetTearless(VOID)
+TEARLESS_API TEARLESS_HANDLE WINAPI GetTearless()
+{
+	return new Tearless_impl();
+}
+
+TEARLESS_API TEARLESS_HANDLE WINAPI GetTearless2()
 {
 	return new Tearless_impl();
 }
@@ -135,6 +153,7 @@ int CTearless::Foo(int n)
 }
 #endif
 
+#ifdef THIS_IS_REALLY_ANNOYING_ME
 CTearless::CTearless() {
 	plugin = TearlessInit();
 	//plugin = dynamic_cast<HTML5Plugin::CPluginHTML5*>(TearlessInit()); // plugin;
@@ -146,11 +165,20 @@ bool CTearless::SetURL(const wchar_t* sURL) {
 bool CTearless::ExecuteJS(const wchar_t* sJS) {
 	return dynamic_cast<HTML5Plugin::CPluginHTML5*>(plugin)->ExecuteJS(sJS);
 }
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////
 // C interface implementation.
 // Internally these functions are written in the C++ language and
 // use TearlessImpl instances.
+
+/// <summary>
+/// returns 1 if processing should continue, 0 if it should be aborted
+/// </summary
+TEARLESS_API LRESULT CALLBACK TearlessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	return HTML5Plugin::CWndProc::OsrWndProc(hWnd, message, wParam, lParam);
+}
 
 TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const wchar_t* ws)
 {
@@ -164,7 +192,7 @@ TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const wchar_t* 
 	return nResult;
 }
 
-TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const wchar_t* ws)
+TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const char* ws)
 {
 	bool nResult = false;
 

@@ -2,6 +2,7 @@
 #include <d3d11.h>
 #include "../../AuthorityProjectConfig.h"
 #include "TearlessLibrary.h"
+#include "../../CryHTML5/src/CPluginHTML5.h"
 
 extern ID3D11Device *          g_D3DDev;
 extern ID3D11DeviceContext *   g_D3DDevCtx;
@@ -18,7 +19,8 @@ IDXGISwapChain* D11SwapChain();
 void D11SwapChain(IDXGISwapChain* v);
 
 #ifdef ENABLE_TEARLESS
-ISimplePluginHTML5 * TearlessInit(bool debugConsole = true);
+HTML5Plugin::CPluginHTML5 * TearlessInit(bool debugConsole = true);
+extern HTML5Plugin::CPluginHTML5 * gChromePlugin;
 #else
 #error("ENABLE_TEARLESS IS NOT SET")
 #endif

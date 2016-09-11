@@ -43,7 +43,7 @@ struct ISimplePluginHTML5
 	* @param sJS the java script code
 	* @return true if successful
 	*/
-	virtual bool ExecuteJS(const wchar_t* sJS) = 0;
+	virtual bool ExecuteJS(const char* sJS) = 0;
 
 	/// <summary>
 	/// Get DirectX11 Device
@@ -107,7 +107,7 @@ public:
 	virtual bool ExecuteJS(const wchar_t* sJS) = 0;
 private:
 	//void* plugin;
-	ISimplePluginHTML5* plugin;
+	ISimplePluginHTML5 * plugin;
 };
 
 // Handle type. In C++ language the iterface type is used.
@@ -128,9 +128,14 @@ typedef struct tagTEARLESS_HANDLE {} *TEARLESS_HANDLE;
 #else
 #   define EXTERN_C
 #endif // __cplusplus
-
+// TEARLESS_API TEARLESS_HANDLE __fastcall GetTearless(int n);
 // Factory function that creates instances of the Tearless object.
 EXTERN_C TEARLESS_API TEARLESS_HANDLE WINAPI GetTearless(VOID);
+EXTERN_C TEARLESS_API TEARLESS_HANDLE WINAPI GetTearless2(VOID);
+/// <summary>
+/// returns 1 if processing should continue, 0 if it should be aborted
+/// </summary>
+EXTERN_C TEARLESS_API LRESULT CALLBACK TearlessWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 ////////////////////////////////////////////////////////////////////////////////
 // Classic C interface.
@@ -141,3 +146,4 @@ EXTERN_C TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const 
 EXTERN_C TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const wchar_t *);
 ////////////////////////////////////////////////////////////////////////////////
 #endif
+

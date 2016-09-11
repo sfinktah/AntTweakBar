@@ -2077,17 +2077,8 @@ int ANT_CALL TwDraw()
         return 0;
 
     // Create cursors
-    #if defined(ANT_WINDOWS) || defined(ANT_OSX)
-        if( !g_TwMgr->m_CursorsCreated )
-            g_TwMgr->CreateCursors();
-    #elif defined(ANT_UNIX)
-        if( !g_TwMgr->m_CurrentXDisplay )
-            g_TwMgr->m_CurrentXDisplay = glXGetCurrentDisplay();
-        if( !g_TwMgr->m_CurrentXWindow )
-            g_TwMgr->m_CurrentXWindow = glXGetCurrentDrawable();
-        if( g_TwMgr->m_CurrentXDisplay && !g_TwMgr->m_CursorsCreated )
-            g_TwMgr->CreateCursors();
-    #endif
+    if( !g_TwMgr->m_CursorsCreated )
+        g_TwMgr->CreateCursors();
 
     // Autorepeat TW_MOUSE_PRESSED
     double CurrTime = g_TwMgr->m_Timer.GetTime();
@@ -2302,10 +2293,6 @@ CTwMgr::CTwMgr(ETwGraphAPI _GraphAPI, void *_Device, int _WndID)
     m_Terminating = false;
     
     m_CursorsCreated = false;   
-    #if defined(ANT_UNIX)
-        m_CurrentXDisplay = NULL;
-        m_CurrentXWindow = 0;
-    #endif  // defined(ANT_UNIX)
 
     m_CopyCDStringToClient = g_InitCopyCDStringToClient;
     m_CopyStdStringToClient = g_InitCopyStdStringToClient;

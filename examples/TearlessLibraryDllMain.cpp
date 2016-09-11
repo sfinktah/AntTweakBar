@@ -1,5 +1,6 @@
 // DllMain.cpp : Defines the entry point for the DLL application.
 //
+#ifndef NOT_STATIC
 
 #include "TearlessLibraryStdAfx.h"
 
@@ -28,5 +29,5 @@ BOOL APIENTRY DllMain( HMODULE /*hModule*/,
 #ifdef _MANAGED
 #pragma managed(pop)
 #endif
-
+#endif
 ////////////////////////////////////////////////////////////////////////////////

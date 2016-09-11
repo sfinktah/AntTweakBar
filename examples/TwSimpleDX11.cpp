@@ -12,7 +12,7 @@
 #include <CPluginHTML5.h>
 using namespace HTML5Plugin;
 using namespace D3DPlugin;
-CPluginHTML5 *gChromePlugin = NULL;
+HTML5Plugin::CPluginHTML5 *gChromePlugin = NULL;
 #endif
 
 // D3D objects
@@ -57,12 +57,13 @@ void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Setter
 /// Inject Tearless (optional console)
 /// </summary>
 /// <returns>Tearless Controller</returns>
-ISimplePluginHTML5* TearlessInit(bool debugConsole) {
+HTML5Plugin::CPluginHTML5 * TearlessInit(bool debugConsole) {
 	if (debugConsole)
 		SfinktahsConsole();
 	gChromePlugin = new CPluginHTML5;
 	gChromePlugin->InitDependencies();  // Calls InitD3DPlugin, and InitCEF (which calls InitCEFBrowser)
-	return dynamic_cast<ISimplePluginHTML5 *>(gChromePlugin);
+	return gChromePlugin;
+	//return dynamic_cast<ISimplePluginHTML5 *>(gChromePlugin);
 }
 
 #else
