@@ -219,9 +219,6 @@ fxc /T ps_4_0_level_9_1 /E TextPS /Fh $(IntDir)TwDirect3D11_TextPS.h TwDirect3D1
       <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /y /f ..\lib\AntTweakBar64.dll ..\examples\bin64</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -326,9 +323,6 @@ fxc /Od /Zi /T ps_4_0_level_9_1 /E TextPS /Fh $(IntDir)TwDirect3D11_TextPS.h TwD
       <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
-    <PostBuildEvent>
-      <Command>if exist ..\examples\debug64  xcopy /y /f ..\lib\debug\AntTweakBar64.dll ..\examples\debug64\.</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LoadOGL.cpp" />
