@@ -41,9 +41,7 @@ public:
 	/// </summary>
 	ID3D11Device* D11Device() { return g_D3DDev; }  // Getter
 	/// <summary>
-	/// Set DirectX11 Devic
-	/// 
-	/// e
+	/// Set DirectX11 Device
 	/// </summary>
 	void D11Device(ID3D11Device* v) { g_D3DDev = v; }            // Setter
 
@@ -64,15 +62,10 @@ public:
 	/// (Unused) Set DirectX11 DeviceContext
 	/// </summary>
 	void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Setter
+	void SetQueryCallback(JSON_CALLBACK callback) { g_fnJsonCallback = callback; }
 
 private:
 	HTML5Plugin::CPluginHTML5* plugin;
-	// D3D objects
-	/*
-	ID3D11Device *          m_D3DDev = NULL;
-	ID3D11DeviceContext *   m_D3DDevCtx = NULL;
-	IDXGISwapChain *        m_SwapChain = NULL;
-	*/
 };
 
 bool Tearless_impl::Show() {
@@ -112,6 +105,12 @@ bool Tearless_impl::ExecuteJS(const char* sJS) {
 	return plugin->ExecuteJS(ws.c_str());
 }
 
+//void Tearless_impl::SetQueryCallback(JSON_CALLBACK cb) {
+//	printf("Tearless_impl: plugin: %p", plugin);
+//	printf("Tearless_impl: gChromePlugin: %p", gChromePlugin);
+//	printf("Setting QueryCallback:%p\n", cb);
+//    // SetQueryCallBack(cb);
+//}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -202,4 +201,14 @@ TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const char* 
 	}
 
 	return nResult;
+}
+
+TEARLESS_API VOID APIENTRY TearlessSetQueryCallback(TEARLESS_HANDLE handle, JSON_CALLBACK cb)
+{
+	bool nResult = false;
+
+	if (handle)
+	{
+		handle->SetQueryCallback(cb);
+	}
 }

@@ -19,6 +19,7 @@ HTML5Plugin::CPluginHTML5 *gChromePlugin = NULL;
 ID3D11Device *          g_D3DDev = NULL;
 ID3D11DeviceContext *   g_D3DDevCtx = NULL;
 IDXGISwapChain *        g_SwapChain = NULL;
+JSON_CALLBACK           g_fnJsonCallback = NULL;
 
 /// <summary>
 /// Get DirectX11 Device
@@ -46,6 +47,7 @@ IDXGISwapChain* D11SwapChain() { return g_SwapChain; }  // Getter
 /// (Unused) Set DirectX11 DeviceContext
 /// </summary>
 void D11SwapChain(IDXGISwapChain * v) { g_SwapChain = v; }            // Setter
+//void SetQueryCallback(JSON_CALLBACK callback) { g_fnJsonCallback = callback; }
 #ifdef ENABLE_TEARLESS
 
 /// <summary>

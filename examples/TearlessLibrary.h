@@ -11,8 +11,9 @@
 #else
 #define TEARLESS_API __declspec(dllimport)
 #endif
-
 #include <d3d11.h>
+#include <string>
+typedef ::std::string(*JSON_CALLBACK)(char *json);
 
 ////////////////////////////////////////////////////////////////////////////////
 // 
@@ -71,6 +72,11 @@ struct ISimplePluginHTML5
 	/// (Unused) = 0;
 	/// </summary>
 	virtual void D11SwapChain(IDXGISwapChain * v) = 0;
+	/// <summary>
+	/// Set JSON processing callback
+	/// </summary>
+	/// <param name="callback"></param>
+	virtual void SetQueryCallback(JSON_CALLBACK) = 0;
 
 };
 
@@ -144,6 +150,7 @@ EXTERN_C TEARLESS_API LRESULT CALLBACK TearlessWndProc(HWND hWnd, UINT message, 
 
 EXTERN_C TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const wchar_t *);
 EXTERN_C TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const wchar_t *);
+EXTERN_C TEARLESS_API VOID APIENTRY TearlessSetQueryCallback(TEARLESS_HANDLE handle, JSON_CALLBACK cb);
 ////////////////////////////////////////////////////////////////////////////////
 #endif
 
