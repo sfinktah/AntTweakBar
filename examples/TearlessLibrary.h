@@ -44,7 +44,8 @@ struct ISimplePluginHTML5
 	* @param sJS the java script code
 	* @return true if successful
 	*/
-	virtual bool ExecuteJS(const char* sJS) = 0;
+	virtual bool ExecuteJS(const char*) = 0;
+	virtual bool ExecuteJSW(const wchar_t*) = 0;
 
 	/// <summary>
 	/// Get DirectX11 Device
@@ -149,7 +150,7 @@ EXTERN_C TEARLESS_API LRESULT CALLBACK TearlessWndProc(HWND hWnd, UINT message, 
 // an exported C routine.
 
 EXTERN_C TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const wchar_t *);
-EXTERN_C TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const wchar_t *);
+EXTERN_C TEARLESS_API INT APIENTRY TearlessExecuteJSW(TEARLESS_HANDLE handle, const wchar_t *);
 EXTERN_C TEARLESS_API VOID APIENTRY TearlessSetQueryCallback(TEARLESS_HANDLE handle, JSON_CALLBACK cb);
 ////////////////////////////////////////////////////////////////////////////////
 #endif

@@ -13,13 +13,13 @@
     <ClCompile Include="..\..\Plugin_D3D\src\dx11\CD3DSystemDX11.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\CPluginHTML5.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\FullscreenTriangleDrawer.cpp" />
-    <ClCompile Include="..\..\CEF\cefclient\browser\geometry_util.cc" />
-    <ClCompile Include="..\..\CEF\cefclient\browser\util_win.cc" />
     <ClCompile Include="binding.cpp" />
     <ClCompile Include="..\..\CryHTML5\src\OsrWndProc.cpp" />
     <ClCompile Include="TearlessLibrary.cpp" />
     <ClCompile Include="TearlessLibraryDllMain.cpp" />
     <ClCompile Include="TearlessLibraryStdAfx.cpp" />
+    <ClCompile Include="..\..\CEF\tests\shared\browser\geometry_util.cc" />
+    <ClCompile Include="..\..\CEF\tests\shared\browser\util_win.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sfinktah\sigslot.h" />

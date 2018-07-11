@@ -35,6 +35,7 @@ public:
 	bool Show();
 	bool SetURL(const wchar_t* sURL);
 	bool ExecuteJS(const char* sJS);
+	bool ExecuteJSW(const wchar_t * ws);
 
 	/// <summary>
 	/// Get DirectX11 Device
@@ -102,6 +103,11 @@ bool Tearless_impl::ExecuteJS(const char* sJS) {
 	for (int i = 0; i < len; i++) {
 		ws.append(1, s[i]);
 	}
+	return plugin->ExecuteJS(ws.c_str());
+}
+
+bool Tearless_impl::ExecuteJSW(const wchar_t* sJS) {
+	std::wstring ws(sJS);
 	return plugin->ExecuteJS(ws.c_str());
 }
 
@@ -191,13 +197,13 @@ TEARLESS_API INT APIENTRY TearlessSetURL(TEARLESS_HANDLE handle, const wchar_t* 
 	return nResult;
 }
 
-TEARLESS_API INT APIENTRY TearlessExecuteJS(TEARLESS_HANDLE handle, const char* ws)
+TEARLESS_API INT APIENTRY TearlessExecuteJSW(TEARLESS_HANDLE handle, const wchar_t* ws)
 {
 	bool nResult = false;
 
 	if (handle)
 	{
-		nResult = handle->ExecuteJS(ws);
+		nResult = handle->ExecuteJSW(ws);
 	}
 
 	return nResult;
